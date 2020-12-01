@@ -1,0 +1,26 @@
+\section{REFERENCIAL TEÓRICO}
+\label{cap:referencial_teorico}
+
+Neste capítulo é apresentado o referencial teórico para desenvolvimento deste trabalho. Descreve-se a triangulação de Delaunay e o seu dual, o diagrama de Voronoi, na seção (\ref{cap_triangulacao_delaunay}). Também apresenta-se, nessa seção, algoritmos para geração, manutenção e refinamento de malhas de Delaunay.
+
+Na seção (\ref{cap_discretizacao_equacao_calor}), realiza-se a discretização da equação do calor, utilizando-se o método dos volumes finitos com o diagrama de Voronoi e define-se um algoritmo em forma de pseudocódigo referente a essa discretização. 
+
+Na seção (\ref{cap_metodo_gradientes_conjugados}), tem-se a construção do método dos gradientes conjugados, apresentando-se um pseudocódigo. Com o intuito de se diminuir o número de iterações, também expõe-se nessa seção uma forma de pré-condicionamento da matriz de coeficientes e um algoritmo para reordenação dos vértices, o algoritmo de Cuthill-McKee reverso em conjunto com o algoritmo de vértice pseudoperiférico.
+
+Na seção (\ref{cap_suavizacao_laplaciana}), descreve-se a suavização laplaciana. Também são apresentadas técnicas de melhoria da qualidade da malha utilizando a suavização laplaciana.
+
+Na seção (\ref{cap_malhas_moveis}), aborda-se as principais características sobre malhas móveis, como adaptatividade de malhas, o princípio de equidistribuição, também apresentando diferentes trabalhos que pretendem solucionar equações diferenciais parciais por diferentes métodos, utilizando os mais variados tipos de malhas. Também apresentam-se técnicas de movimento dos vértices baseadas na formulação laplaciana.
+
+Na seção (\ref{cap_metrica_geometrica}), explana-se uma métrica geométrica para verificar a degeneração da malha ao movimentar os vértices.
+
+\input{triangulacao_delaunay}
+
+\input{discretizacao}
+ 
+\input{cg}
+ 
+\input{suavizacao_laplaciana}
+ 
+\input{malhas_moveis}
+
+\input{metrica_geometrica}

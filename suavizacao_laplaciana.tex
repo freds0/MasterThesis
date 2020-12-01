@@ -1,0 +1,10 @@
+\subsection{Suavização laplaciana}
+\label{cap_suavizacao_laplaciana}
+
+Uma forma de melhorar a qualidade da malha é aplicar um método de suavização, que reduz a distorção dos elementos ajustando a localização dos nós. Um método de suavização bastante conhecido é a suavização laplaciana, que move um vértice para o baricentro do polígono formado pelos seus vértices incidentes. Segundo \citeonline{Freitag1997}, esse método opera heuristicamente e não garante a melhoria na qualidade dos elementos. A forma simplificada da suavização laplaciana, aplicada a um nó $P$, pode ser escrita na forma 
+\[
+S_{P}^{n+1} = S_{P}^{n} + \beta \frac{ \sum_{i=1}^{m} \omega_{P,i}(S_{i}^{n} - S_{P}^{n}) } { \sum_{i=1}^{m} \omega_{P,i} }, 
+\]
+\noindent em que $S_{P} = (x,y)$ é a posição do vértice $P$ para duas dimensões, $S_{P}^{n+1}$ é a posição do nó $P$ na etapa $n+1$ de suavização, $S_{i}$'s são as posições dos nós adjacentes a $P$, $\omega_{P,i}$ é o peso da aresta que conecta $P$ ao $i$-ésimo nó vizinho e $ 0 < \beta < 1$ é um parâmetro de adaptatividade que controla a amplitude do movimento, definido localmente ou globalmente. 
+
+Com o intuito de evitar as possíveis distorções de sucessivas iterações, \citeonline[seção 3]{Taubin1995} e \citeonline[seção 2]{Taubin1995A} propôs combinar duas suavizações sucessivas: $S_{P}^{n+1} = S_{P}^{n} + \lambda \Delta S_{P}^{n}$ e $S_{P}^{n+2} = S_{P}^{n+1} - \mu \Delta S_{P}^{n+1}$, em que $\Delta S_{P}^{n} =  \frac{ \sum_{i=1}^{m} \omega_{P,i}(S_{i}^{n} - S_{P}^{n}) } { \sum_{i=1}^{m} \omega_{P,i} }$ e os parâmetros quantificadores do movimento $0 < \lambda < \mu$. \citeonline{Taubin1996} ainda analisam as propriedades desse método e expõem como minimizar seu tempo de execução. Essa suavização é também chamada de suavização $\lambda/\mu$. \citeonline{Kobbelt1998} orientou utilizar $\lambda = \mu = 1$, nomeando esse método de suavização bi-laplaciana.

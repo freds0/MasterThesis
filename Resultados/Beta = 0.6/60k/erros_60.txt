@@ -1,0 +1,2 @@
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.904694e+00 y: 4.687558e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 2.695312e+01 y: 4.907800e+01

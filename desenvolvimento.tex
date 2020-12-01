@@ -1,0 +1,188 @@
+\section{DESCRIÇÃO DO PROJETO COMPUTACIONAL PARA A SOLUÇÃO DA EQUAÇÃO DE CONDUÇÃO DO CALOR}
+\label{cap:desenvolvimento}
+
+Neste capítulo, descreve-se o projeto computacional para a solução de equações diferenciais parciais (EDPs) por discretizações por volumes finitos com refinamento de Delaunay e malhas móveis. Na seção (\ref{cap_aritmetica_precisão_arbitraria}), trata-se de apresentar a biblioteca de aritmética de precisão arbitrária e os motivos que levaram à sua escolha. Na seção (\ref{cap_malha_inicial}),  explica-se como é criada a triangulação inicial. Na seção (\ref{cap_refinamento_adaptativo}), descreve-se o procedimento de refinamento adaptativo, detalhando como é feita a seleção dos triângulos localizados nas regiões de grande variação. Apresenta-se um pseudocódigo desses procedimentos. Na seção (\ref{cap_resolucao_malha_inicial}), descreve-se como é realizada a resolução da malha inicial. Na seção (\ref{cap_movimento_vertices}), expõe-se o procedimento que realiza o movimento dos vértices entre as variações temporais da EDP, a função monitora escolhida e o critério de parada. Também apresenta-se um pseudocódigo desse procedimento. Todo o código foi implementado utilizando a linguagem de programação C++.
+
+\subsection{Aritmética de precisão arbitrária}
+\label{cap_aritmetica_precisão_arbitraria}
+
+Preliminarmente, com o intuito de reduzir erros numéricos, verificou-se que seria necessário utilizar uma biblioteca para aritmética de precisão arbitrária. Dentre as diversas opções disponíveis, há a  {\it GNU Multiple-Precision Library}, também conhecida como GMP, que é uma biblioteca de código aberto para aritmética de precisão arbitrária, trabalhando sobre inteiros, racionais e números de ponto flutuante. Essa biblioteca permite que variáveis tenham um tamanho de bytes variável. Detalhes sobre a GMP podem ser verificados em \citeonline{GMP2012}. 
+
+Outra opção, baseada na GMP, é a {\it Multiple-Precision Floating-point computations with correct Rounding} (MPFR). Essa biblioteca possui um conjunto maior de funções em comparação com a GMP, em especial funções transcendentais como exponenciais, logaritmos e funções trigonométricas, e valores especiais, como zeros assinados, infinitos e indicando o que não é um número - NaN. Além disso, a MPFR fornece um argumento adicional para as suas funções, em que se define o arredondamento utilizado, conforme especificado pelo padrão IEEE 754-200  \footnote{Disponível em http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=\&arnumber=4610935 }. 
+
+Neste trabalho, o parâmetro utilizado em todas as operações especifica o arredondamento ``{\it round to nearest}``, em que, ao realizar o arredondamento, o {\it bit} menos significativo é definido para zero. Conforme \citeonline{MPFR2007}, utilizando a MPFR é garantido que o resultado de qualquer operação seja o valor de ponto flutuante mais próximo possível do resultado exato. Maiores informações sobre a MPFR podem ser encontradas em \citeonline{MPFR2007}. Ainda, optou-se por utilizar uma interface da MPFR para C++, chamada {\it mpfr::real} \footnote{Disponível em: http:://chschneider.eu/programming/mpfr\_real/}, publicada sob os termos da GNU GPL v3  \footnote{Disponível em: http://www.gnu.org/licenses/}, que minimiza as alterações necessárias no código para utilizar a biblioteca para aritmética de precisão arbitrária MPFR.
+
+\subsection{Criação da malha inicial}
+\label{cap_malha_inicial}
+
+Ao executar o código, inicialmente, lê-se um arquivo de entrada contendo os vértices iniciais da triangulação. O domínio é dividido em dois triângulos, formados pelos vértices situados na fronteira do domínio. A malha inicial, formada pelos vértices do arquivo de entrada, é criada utilizando o algoritmo de \citeonline{Green1978}, conforme o algoritmo (\ref{algoritmo_green_sibson}) apresentado na seção (\ref{cap_algoritmo_green_sibson}), na página \pageref{cap_algoritmo_green_sibson}. Neste trabalho, para geração da malha inicial, utilizou-se o projeto computacional criado para as simulações publicadas em \citeonline{TallesSanderson2012}.
+
+A malha inicial gerada conterá triângulos de Delaunay em todo o domínio que envolve o \emph {Planar Straight Line Graph} (PSLG). Este algoritmo recebe como entrada um PSLG, permitindo arestas pendentes e pontos isolados, tendo apenas a restrição de que todos os ângulos presentes no PSLG sejam, de pelo menos, $60^{\circ}$. Dessa forma, tem-se a triangulação inicial, formada pelos vértices do arquivo de entrada. Com a malha inicial gerada, pode-se realizar o refinamento adaptativo.
+
+\subsection{Refinamento de Delaunay}
+\label{cap_refinamento_adaptativo}
+
+Executam-se os algoritmos de \citeonline{Ruppert1995} e, em seguida, o de \citeonline{Ungor2004, Ungor2009}, cujos códigos-fonte foram criados pelo projeto computacional desenvolvido por \citeonline{TallesSanderson2012a}. Neste, trabalho realiza-se o refinamento de Delaunay seguindo dois critérios, que são explicados a seguir, até que o número mínimo de vértices, denotado por $\chi$, seja atingido. Apresentou-se o algoritmo de \citeonline{Ungor2004, Ungor2009} na subseção (\ref{cap_off_centers}), representado pelo algoritmo (\ref{algoritmo_ungor}), na página \pageref{algoritmo_ungor}. O número mínimo de vértices para a fase de refinamento é definido na subseção (\ref{comparativo_a}), página \pageref{comparativo_a}.
+
+O primeiro critério, denotado por $\sigma$, definido automaticamente durante a execução, seleciona triângulos localizados em regiões de grande variação. Para isso, utiliza-se o gradiente, chamado aqui de $\gamma$. Para calcular $\gamma$, considere uma aresta $a$ de um determinado triângulo, formada pelos vértices $v_1$ e $v_2$. Calcula-se o módulo da diferença do valor $\phi$ da EDP nesses vértices, dividido pela distância que os separa. Com isso, tem-se que $\gamma_{a} = \frac{ | \phi_{v_1} - \phi_{v_2} | }{d_{( v_{1},v_{2} )}}$, em que $\phi_{v_1}$ é o valor da EDP no vértice $v_1$, $\phi_{v_2}$ é o valor da EDP no vértice $v_2$ e $d_{( v_{1},v_{2} )}$ é a distância que separa os vértices $v_1$ e $v_2$. 
+
+No passo de refinamento adaptativo, em que se verifica se a quantidade mínima de vértices é alcançada, o valor do critério $\sigma$ é aumentado, de modo a selecionar triângulos localizados em regiões de maior variação em relação à iteração anterior. Ao se aumentar $\sigma$, seleciona-se menos arestas para o refinamento, mas somente arestas nas regiões de maior variação da solução. Para se definir o aumento de $\sigma$, calcula-se o maior e menor valor de $\gamma$ na malha, $\gamma_{max}$ e $\gamma_{min}$ respectivamente, e obtém-se a diferença entre esses valores. Essa diferença será multiplicada por uma constante $0 < \theta < 1$ de forma que, quanto menor o valor de $\theta$, mais triângulos serão selecionados por esse critério. Para os testes realizados, define-se o valor de $\theta$ na pág. \pageref{cap:resultados}, do capítulo (\ref{cap:resultados}). Dessa forma, a cada iteração do passo de refinamento adaptativo, atualiza-se $\sigma$, com seu valor inicial igual a zero, de forma que $\sigma \leftarrow \sigma + \theta( \gamma_{max} - \gamma_{min})$. Com isso, triângulos que foram refinados em uma iteração não serão selecionados na iteração posterior, pois o valor de $\gamma$ aumentou. Triângulos que contêm, pelo menos, uma aresta com $\gamma > \sigma$ serão refinados utilizando o algoritmo de \citeonline{Ruppert1995}, cujo código-fonte foi desenvolvido pela implementação em \citeonline{TallesSanderson2012}. 
+
+O segundo critério refere-se ao ângulo mínimo $\alpha$, definido pelo usuário. Triângulos com ângulo mínimo menor que $\alpha$ serão refinados utilizando o algoritmo de \citeonline{Ungor2004, Ungor2009}, cujo código-fonte foi desenvolvido pela implementação de \citeonline{TallesSanderson2012a}. Em vez de se verificar o ângulo mínimo de cada triângulo, considera-se a métrica {\it Circunradius-to-shortest Edge Radio} (CER), explicada na subseção (\ref{cap_algoritmo_ruppert}), na página \pageref{cap_algoritmo_ruppert}, denotada por $\rho$. Como $\rho$ é inversamente proporcional ao ângulo, para uma boa qualidade geométrica, $\rho$ deve ser menor que $\rho_{\alpha}$, em que $\rho_{\alpha}$ é o valor da medida CER do ângulo $\alpha$. Com isso, refinam-se os triângulos com $\rho > \rho_{\alpha}$. Consequentemente, o maior valor da medida CER encontrado na malha, denotado por $\rho_{max}$, será tal que $\rho_{max} < \rho_{\alpha}$.
+
+Dessa forma, tem-se o refinamento dos triângulos localizados nas regiões de grande variação, com uma qualidade mínima garantida pelo algoritmo de \citeonline{Ungor2004, Ungor2009}.
+
+\subsection{Resolução da equação de condução do calor por discretizações de volumes finitos na malha inicial}
+\label{cap_resolucao_malha_inicial}
+
+Após realizar o refinamento adaptativo, executa-se o método dos volumes finitos (MVF), representado pelo algoritmo (\ref{algoritmo_metodo_volumes_finitos}) da subseção (\ref{cap_discretizacao_malha_irregular}), página \pageref{algoritmo_metodo_volumes_finitos}, a fim de gerar o sistema linear. Para solucionar a equação da condução de calor adaptou-se o código-fonte desenvolvido por \citeonline{TallesSanderson2012a} a fim de obter a solução da equação de Laplace por discretizações de volumes finitos. Considera-se que o valor da EDP, em todos os vértices internos, na iteração inicial no tempo, é igual a zero. 
+
+Realiza-se o reordenamento da lista de vértices utilizando o algoritmo Cuthill-McKee reverso (CMr), conforme o algoritmo (\ref{algoritmo_cuthill_mckee}), introduzido na subseção (\ref{cap_cuthill_mckee_reverso}), página \pageref{algoritmo_cuthill_mckee}, com o vértice pseudoperiférico $\nu$ como vértice inicial, conforme o algoritmo (\ref{algoritmo_pseudo_periferico}), apresentado na mesma subseção, na página \pageref{algoritmo_pseudo_periferico}, cujo código-fonte foi desenvolvido na implementação de \citeonline{GuilhermeSanderson2013}. 
+
+Executa-se o método dos gradientes conjugados (MGC) com precisão numérica $\epsilon$, cujo código-fonte foi desenvolvido na implementação de \citeonline{TallesSanderson2012a}, tal qual o algoritmo (\ref{algoritmo_gradiente_conjugado}), introduzido na subseção (\ref{cap_construcao}), página \pageref{algoritmo_gradiente_conjugado}, a fim de atualizar os valores da EDP em cada vértice, obtendo melhores resultados após o refinamento adaptativo. 
+
+O processo para criação da malha inicial e refinamento adaptativo pode ser observado no algoritmo (\ref{malha_refinamento_adaptativo}). Os parâmetros de entrada do algoritmo (\ref{malha_refinamento_adaptativo}) são mostrados na tabela (\ref{tabelaParametrosEntrada}). O algoritmo 7 é apresentado conforme desenvolvido em \citeonline{GuilhermeSanderson2013}. A próxima etapa trata do movimento dos vértices, na subseção (\ref{cap_movimento_vertices}). 
+
+\begin{algorithm}
+\caption{ Método de geração e refinamento da malha.} 
+\label{malha_refinamento_adaptativo}
+\Entrada{Grafo $G=(L_V,L_E)$, em que $L_V$ é a lista dos v\'ertices e $L_A$ é a lista de arestas da triangulação inicial, $\alpha$, $\theta$, $\epsilon$, $\Delta t$ e $\chi$.  \CommentSty{// Verifique tabela (\ref{tabelaParametrosEntrada}).} }
+\Saida{Solução inicial. \CommentSty{// Malha com \^angulos entre $\alpha$ e\\ // $\pi - 2 \alpha$, refinada nas regiões de grande varia\c{c}\~ao.} }
+\Inicio{
+  $\sigma \leftarrow 0$; \\
+  \CommentSty{// Gera malha $M$, a partir de $L_V$.}  \\   
+  $M \leftarrow AlgoritmoGreenSibson(L_V);$ \\ 
+  \CommentSty{// Nas simula\c{c}\~oes, $\chi$ \'e definido na subse\c{c}\~ao\\ // (\ref{comparativo_a}), p\'agina \pageref{comparativo_a}.} \\
+  \Enqto{ ($M.numeroVertices < \chi$ ) } 
+  { \nllabel{laco_enquanto_inicio} 
+      \CommentSty{// $\gamma_{max}$ e $\gamma_{min}$ são o maior e menor valor de $\gamma$ da\\ // malha, em que $\gamma$ \'e o gradiente.} \\           
+      $\gamma_{max} \leftarrow calcula\gamma_{max}(M)$; \\
+      $\gamma_{min} \leftarrow calcula\gamma_{min}(M)$; \\
+      \CommentSty{// $\sigma$ \'e o crit\'erio de sele\c{c}\~ao de tri\^angulos\\ // para refinamento.} \\           
+      $\sigma \leftarrow \sigma + \theta ( \gamma_{max} - \gamma_{min} )$; \\
+      \CommentSty{// Refina triangulos com $\gamma > \sigma$.}  \\   
+      $RefinaPorAlgoritmoRuppert(\sigma , M);$ \\
+      \CommentSty{// Refina tri\^angulos com \^angulos menores que\\ // $\alpha$.}  \\ 
+      $RefinaPorAlgoritmoUngor(\alpha, M);$ \\      
+      \CommentSty{// Gera sistema linear pelo MVF.}  \\ 
+      $MetodoVolumesFinitos(M, t \times \Delta t)$; \\
+      \CommentSty{// Executa reordenação dos v\'ertices.}  \\
+      $\nu \leftarrow AlgoritmoVerticePseudoPeriferico(M)$; \\
+      $AlgoritmoCuthillMcKeeReverso(M, \nu);$ \\      
+      \CommentSty{// Atualiza valores da EDP pelo MGC.}  \\       
+      $MetodoGradientesConjugados(M, \epsilon)$; \\         
+  } \nllabel{laco_enquanto_fim} 
+}
+\end{algorithm}
+
+\begin{table}[!h!t!b]
+\centering%fim da centralização da tabela
+\vspace*{11pt}
+\begin{tabularx}{\textwidth}{c c X}
+\hline
+Variável & Algoritmo &  Descrição \\
+\hline %----- linha horizontal
+$L$             & (\ref{malha_refinamento_adaptativo})                       & Lista de vértices e arestas da triangulação inicial de Delaunay. \\
+$\theta$        & (\ref{malha_refinamento_adaptativo})                       & Constante quantificadora do critério de seleção para refinamento.  \\
+$\chi$          & (\ref{malha_refinamento_adaptativo})                       & Número mínimo de vértices na malha. \\
+$M$             & (\ref{malha_movel})                                        & Malha inicial gerada no algoritmo (\ref{malha_refinamento_adaptativo}). \\
+$\beta$         & (\ref{malha_movel})                                        & Parâmetro que controla a amplitude do movimento dos vértices. \\
+$\lambda$,$\mu$ & (\ref{malha_movel})                                        & Parâmetros de relaxamento específicos da função de \citeonline{Taubin1995, Taubin1995A}. \\
+$\eta$          & (\ref{malha_movel})                                        & Valor de tolerância da métrica SRQ para continuar movimentando os vértices. \\
+$t_{final}$     & (\ref{malha_movel})                                        & Número máximo de iterações temporais. \\
+$\Delta t$      & (\ref{malha_refinamento_adaptativo}) e (\ref{malha_movel}) & Variação do tempo utilizado na discretização da equação do calor pelo MVF. \\
+$\alpha$        & (\ref{malha_refinamento_adaptativo}) e (\ref{malha_movel}) & Ângulo mínimo utilizado para realizar refinamento. \\
+$\epsilon$      & (\ref{malha_refinamento_adaptativo}) e (\ref{malha_movel}) & Precisão numérica do MGC. \\
+\hline %----- linha horizontal
+\end{tabularx}%--- fechamento do ambiente tabular
+\caption{Descrição dos parâmetros de entrada dos algoritmos (\ref{malha_refinamento_adaptativo}) e (\ref{malha_movel}). Todas as variáveis são definidas pelo usuário via arquivo de configuração.} %legenda da tabela
+\label{tabelaParametrosEntrada}
+\end{table}
+
+\subsection{Movimento dos vértices}
+\label{cap_movimento_vertices}
+
+O movimento dos vértices ocorre entre cada etapa de variação do tempo, referente à discretização da equação do calor. Entre cada etapa de variação do tempo optou-se por realizar o movimento dos vértices enquanto uma condição de qualidade geométrica da malha for satisfeita. Quando essa condição não for mais satisfeita, executa-se o algoritmo de \citeonline{Ungor2004, Ungor2009}, pela implementação desenvolvida por \citeonline{TallesSanderson2012a}, com o objetivo de melhorar a qualidade da malha. Essa métrica de qualidade geométrica será explicada mais adiante.
+
+Definiu-se uma nova função monitora, chamada de $\Lambda$, baseada no laplaciano. Leva-se em consideração a maior diferença do valor da EDP em toda a malha entre vértices adjacentes. Para um vértice $P$, a função monitora $\Lambda$ fica $S_{P}' \leftarrow S_{P} + \frac {\beta} {\Delta \phi_{max} } \sum_{i=1}^{n} (S_i - S_P) (| \phi_i - \phi_P |)$, em que $S_P$ é a posição do vértice $P$, $0 < \beta < 1$ é um parâmentro para controle do movimento, $n$ é o número de vértices adjacentes a $P$, $\phi_i$ é o valor da EDP no vértice $i$, adjacente à $P$, $\phi_P$ é o valor da EDP no vértice $P$, $\Delta \phi_{max}$ é o maior valor de $| \phi_i - \phi_P|$, para toda aresta pertencente à malha e $S_P'$ é o valor da nova posição do vértice $P$. Essa função realiza movimentos mais rápidos nas regiões de maior variação, onde o $| \phi_i - \phi_P $| é próximo ao valor de $\Delta \phi_{max}$.
+
+A função monitora $\Lambda$ é comparada com outras quatro funções, todas conforme $S_{P}' \leftarrow S_{P} + \beta  \frac { \Sigma_{i = 1}^{n} (S_{i} - S_{P}) \omega_{P,i} } { \Sigma_{i = 1}^{n}  \omega_{P,i}  }$, apresentadas na seção (\ref{cap_suavizacao_laplaciana}), página \pageref{cap_suavizacao_laplaciana}. As funções, escolhidas por serem consideradas clássicas na literatura, são as seguintes:
+
+\begin{enumerate}
+ \item Comparação com a função monitora baseada diretamente na formulação laplaciana, em que $\omega_{P,i} = { | \phi_{i} - \phi_{P} | }$. Essa função é aqui chamada de $\Gamma$;
+ 
+ \item Comparação com uma função proposta por \citeonline{Taubin1995, Taubin1995A}, em que $\omega_{P,i} = { | \phi_{i} - \phi_{P} | }$, combinada por dois movimentos sucessivos, conforme tal que $S_{P}' = S_{P} + \lambda \Delta S_{P}$ e $S_{P}'' = S_{P}' - \mu \Delta S_{P}'$, em que $\Delta S_{P} =  \frac{ \sum_{i=1}^{m} \omega_{P,i}(S_{i}^{n} - S_{P}^{n}) } { \sum_{i=1}^{m} \omega_{P,i} }$ e os parâmetros de relaxamento $0 < \lambda < \mu$. Essa função é aqui chamada de $\Xi$, mas é conhecida como função $\lambda - \mu$. Esse esquema de duas combinações sucessivas foi utilizado no âmbito da suavização laplaciana em \citeonline{Taubin1995, Taubin1995A}. Na subseção (\ref{cap_movimento_laplaciano}), página \pageref{cap_movimento_laplaciano}, apresentam-se alguns trabalhos que utilizam essa função para melhoria da qualidade da malha. Não foram encontrados trabalhos em que se utilizou essa função como função monitora; 
+ 
+ \item Comparação com a função monitora proposta por \citeonline{Taubin1995, Taubin1995A}, entretanto, configurada com $\lambda = \mu$, conforme proposto por \citeonline{Kobbelt1998}, conhecida como bi-laplaciana, chamada aqui de $\Psi$. Na subseção (\ref{cap_movimento_laplaciano}), página \pageref{cap_movimento_laplaciano}, apresentam-se trabalhos que utilizam essa função. Não foram encontrados trabalhos em que se utilizou essa função como função monitora;
+ 
+ \item Comparação com a função definida por \citeonline[p. 57 - 58]{Thompson1999}, em que o peso $\omega_{P,i}$ é tal que $\omega_{P,i} = \iota \left( \frac { | \phi_{i} - \phi_{P} | } { | \phi_{i} + \phi_{P} | } \right) $, para $0 < \iota < 1$. Essa função é aqui chamada de $\Upsilon$.
+\end{enumerate}
+
+Os valores de $\beta$, $\lambda$, $\mu$ e $\iota$, utilizados nas funções monitoras, são definidos no capítulo (\ref{cap:resultados}).
+
+Escolheram-se essas funções monitoras, pois são funções consideradas eficientes, graças à sua velocidade e simplicidade. São funções já concretizadas na literatura, clássicas, sendo utilizadas em diversos trabalhos comparativos, conforme apresentados nas subseções (\ref{cap_movimento_laplaciano}) e (\ref{trabalhos_laplacianos}). Além disso, quanto às funções de \citeonline{Taubin1995, Taubin1995A} e \citeonline{Kobbelt1998}, chamadas aqui respectivamente de $\Xi$ e $\Psi$, não foram encontrados trabalhos em que essas funções foram utilizadas a fim de obter melhorias na aproximação da solução da EDP. Optou-se também pela função de \citeonline{Thompson1999}, chamada aqui de $\Upsilon$, por apresentar bons resultados nos testes realizados e, além disso, segundo o autor, trata-se de uma típica abordagem.
+
+Avaliou-se a possibilidade de movimentar os vértices, repetidamente, até que não houvesse mais movimento, em seguida, executar o algoritmo de \citeonline{Ungor2004, Ungor2009} e avançar a etapa de tempo. Entretanto, devido à alta precisão da biblioteca MPFR, experimentos mostraram que o movimento, ainda que pequeno, sempre ocorre. Ao se realizar testes em uma malha com 100 vértices, movimentando-a, incondicionalmente, ao atingir 400 iterações de movimento dos vértices, os valores das métricas de qualidade não variavam mais. No entanto, o movimento dos vértices ainda existia. 
+
+O procedimento de movimento dos vértices repete-se enquanto a malha tiver uma qualidade geométrica mínima. A métrica {\it Shape Regularity Quality} (SRQ), descrita na subseção (\ref{cap_metrica_geometrica}), na página \pageref{cap_metrica_geometrica}, denotada  por $\upsilon$, é verificada. O valor de $\upsilon$ varia de zero a um e, quanto mais próximo de um, mais se assemelha a um triângulo equilátero. Então, movimenta-se a malha enquanto esta ainda tiver um valor satisfatório de $\upsilon$. Dessa forma, define-se um valor $0 < \eta < 1$ de forma que, o procedimento de movimento dos vértices é repetido enquanto $\upsilon_{min} > \eta$, em que $\upsilon_{min}$ é o menor valor da medida SRQ encontrado na malha. O valor de tolerância $\eta$ da métrica SRQ para continuar movimentando  os vértices é definido na página \pageref{cap:resultados}, do capítulo (\ref{cap:resultados}).
+
+Com o término do procedimento de movimento dos vértices, executa-se o algoritmo de \citeonline{Ungor2004, Ungor2009} e avança-se uma iteração no tempo. O algoritmo de \citeonline{Ungor2004, Ungor2009} torna a malha uma triangulação de Delaunay, caso essa tenha deixado de ser, exceto se tiver ocorrido o emaranhamento das arestas, apresentando erros caso triângulos com essas arestas sejam selecionados para refinamento. Após avançar a etapa de tempo, executa-se o MVF, o algoritmo CMr com o vértice pseudoperiférico $\nu$ como vértice inicial e o MGC, com precisão numérica $\epsilon$. O procedimento para movimentar os vértices e realizar o refinamento de triângulos com $\measuredangle < \alpha$ pode ser observado no algoritmo (\ref{malha_movel}). Os parâmetros de entrada do algoritmo (\ref{malha_movel}) são mostrados na tabela (\ref{tabelaParametrosEntrada}), página \pageref{tabelaParametrosEntrada}. Por fim, verifica-se se houve o emaranhamento de arestas, por meio de um método que busca vértices dentro dos triângulos. Um método de força bruta mostrou-se demasiadamente demorado portanto, utilizou-se um método que verifica se os vértices vizinhos e os vizinhos desses encontram-se dentro do triângulo em questão.
+
+\begin{algorithm}
+\caption{ Método de movimento da malha (malha móvel).} 
+\label{malha_movel}
+\Entrada{Malha inicial $M$, $\alpha$, $\beta$, $\epsilon$, $\eta$, $\Delta t$ e $t_{final}$. \\ \CommentSty{ // Verifique tabela (\ref{tabelaParametrosEntrada}).} }
+\Saida{Solução da equa\c{c}\~ao do calor por discretiza\c{c}\~oes de volunes finitos com diagrama de Voronoi.}
+\Inicio{    
+    $t \leftarrow 1;$ \CommentSty{// Para t=0, considera-se o algoritmo (\ref{malha_refinamento_adaptativo}).}  \\        
+    \Enqto{ ($t \leq t_{final}$) } 
+    {
+	\Repita{ ($houveMov = falso$) ou ($\upsilon_{min} < \eta$) } 
+	{ \nllabel{laco_repita_inicio}    
+	    \CommentSty{// Movimenta a malha e calcula $\upsilon_{min}$}  \\   	    
+	    $houveMov \leftarrow MovimentaMalha(\beta, M)$;  \nllabel{movimenta_malha}  \\
+	    $ \upsilon_{min} \leftarrow ShapeRegularityQuality(M)$; \\
+	    \Se { ($houveMov$ e $\upsilon_{min} \geq \eta$) } {    
+	      \CommentSty{// Gera sistema linear pelo MVF.}  \\ 
+	      $MetodoVolumesFinitos(M, t \times \Delta t)$; \\
+	      \CommentSty{// Executa reordenação dos v\'ertices.}  \\
+	      $\nu \leftarrow AlgoritmoVerticePseudoPeriferico(M)$; \\
+	      $AlgoritmoCuthillMcKeeReverso(M, \nu);$ \\
+	      \CommentSty{// Atualiza valores da EDP pelo MGC.}  \\ 
+	      $MetodoGradientesConjugados(M, \epsilon)$; \\
+	    }
+	} \nllabel{laco_repita_fim}    
+	\Se { ($\upsilon_{min} < \eta$) } {
+	  \CommentSty{// Refina tri\^angulos com $\measuredangle < \alpha$.}  \\   	  
+	  $RefinaPorAlgoritmoUngor(\alpha , M)$;  \CommentSty{ // se a malha\\ // deixou de ser uma triangulação de\\ // Delaunay, off-centers fará com que seja.}  \\	  
+	}
+	\Se { (houveMov)  } {
+	  \CommentSty{// Gera sistema linear pelo MVF.}  \\ 
+	  $MetodoVolumesFinitos(M, t \times \Delta t)$; \\	
+	  \CommentSty{// Executa reordenação dos v\'ertices.}  \\
+	  $\nu \leftarrow AlgoritmoVerticePseudoPeriferico(M)$; \\
+	  $AlgoritmoCuthillMcKeeReverso(M, \nu)$; \\      		
+	  \CommentSty{// Atualiza valores da EDP pelo MGC.}  \\ 
+	  $MetodoGradientesConjugados(M, \epsilon)$; \\    	
+        }	
+	$t \leftarrow t + 1$; \CommentSty{// Avan\c{c}a a etapa de tempo.}  \\ 
+	\CommentSty{// Gera sistema linear para etapa $t+1$.}  \\ 
+	$MetodoVolumesFinitos(M, t \times \Delta t)$; \\
+	\CommentSty{// Executa reordenação dos v\'ertices.}  \\
+	$\nu \leftarrow AlgoritmoVerticePseudoPeriferico(M)$; \\
+	$AlgoritmoCuthillMcKeeReverso(M, \nu)$; \\ 
+	\CommentSty{// Atualiza valores da EDP para etapa $t+1$.}  \\ 
+	$MetodoGradientesConjugados(M, \epsilon)$; \\ 
+    }
+}
+\end{algorithm}  
+
+Apesar de o algoritmo de \citeonline{Ungor2004, Ungor2009} utilizar a métrica CER, para se avaliar a qualidade da malha, utiliza-se a métrica SRQ no algoritmo (\ref{malha_movel}). Inicialmente, considerou-se a possibilidade de se utilizar também a métrica CER como critério de parada do movimento de vértices. Entretanto, para utilizar a métrica CER e para existir a possibilidade de movimentar a malha por sucessivas vezes com essa métrica, seria necessário criar uma malha com um ângulo mínimo de $32^{\circ}$, e movimentar a malha enquanto $\alpha_{min} > 30^{\circ}$, criando uma ``folga'' de $2^{\circ}$, por exemplo. Caso contrário, cada função seria executada uma só vez. A utilização da SRQ permitiu que o movimento de malhas com uma função monitora pudesse ser executado sucessivas vezes, sem haver emaranhamentos da malha.
+
+
+\subsection{Resumo}
+\label{cap_consideracoes_finais}
+
+Nesse capítulo, apresentou-se a biblioteca de aritmética de precisão arbitrária MPFR e os motivos que levaram à sua escolha. Também elucidou-se como é criada a triangulação de Delaunay inicial, o refinamento adaptativo e o procedimento que realiza o movimento dos vértices. 
+
+Definiu-se uma nova função monitora, denotada $\Lambda$. Também esclareceu-se como é realizado o movimento dos vértices enquanto atender um critério de qualidade mínima, definido por uma métrica de qualidade geométrica. Outras funções monitoras foram apresentadas, que serão comparadas com a função monitora $\Lambda$. Também apresentam-se pseudocódigos de todos os procedimentos.

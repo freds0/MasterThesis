@@ -1,0 +1,25 @@
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.219635e-01 y: 3.515625e+00
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.194967e-01 y: 1.953125e+00
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.491157e-01 y: 1.171875e+00
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: 5.039214e+01 y: 4.179688e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.677380e-01 y: 4.570312e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.849158e-01 y: 4.492188e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.761339e-01 y: 4.648438e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -3.908413e-01 y: 3.789062e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.417522e-01 y: 4.101562e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.172318e-01 y: 3.945312e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.657780e-01 y: 3.867188e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.451828e-01 y: 4.179688e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.651689e-01 y: 3.009552e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.962249e-01 y: 2.226562e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.906319e-01 y: 2.617188e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.919540e-01 y: 1.915518e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 2.789346e+01 y: 2.223412e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -2.458242e-01 y: 1.850450e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: 5.032740e+01 y: 3.776783e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.010025e-01 y: 4.257812e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -6.708349e-01 y: 2.910540e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.045803e-01 y: 2.148438e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: 5.005149e+01 y: 1.010742e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -4.838050e-02 y: 2.926451e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.964793e+01 y: 4.964727e+01

@@ -1,0 +1,936 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v<VERSION> }
+
+\bibitem[Askes 2000]{Askes2000}
+\abntrefinfo{Askes}{ASKES}{2000}
+{ASKES, H.
+\emph{Advanced Spatial Discretisation Strategies for Localised Failure. Mesh
+  Adaptivity and Meshless Methods}.
+168~p. Tese (Aerospace Engineering) --- Technische Universiteit Delft, Delft -
+  Nederlands, May 2000.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/repository\-.tudelft\-.nl\-/view\-/ir\-/uuid3A1f6cd5e6-08ad-4f0f-ba40-ea51ee0f4c16\-/$>$}{http://repository.tudelft.nl/view/ir/uuid3A1f6cd5e6-08ad-4f0f-ba40-ea51ee0f4c16/}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Bank e Smith 1997]{Bank97}
+\abntrefinfo{Bank e Smith}{BANK; SMITH}{1997}
+{BANK, R.~E.; SMITH, R.~K. Mesh smoothing using a posteriori error estimates.
+\emph{SIAM JOURNAL ON NUMERICAL ANALYSIS}, v.~34, n.~3, p. 979--997, 1997.}
+
+\bibitem[Beckett et al. 2002]{Beckett2002}
+\abntrefinfo{Beckett et al.}{BECKETT et al.}{2002}
+{BECKETT, G.; MACKENZIE, J.; RAMAGE, A.; SLOAN, D. Computational solution of
+  two-dimensional unsteady \uppercase{PDE}s using moving mesh methods.
+\emph{Journal of Computational Physics}, v.~182, n.~2, p. 478--495, 2002.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0021999102971792$>$}{http://www.sciencedirect.com/science/article/pii/S0021999102971792}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Belyaev e Ohtake 2003]{Ohtake2003}
+\abntrefinfo{Belyaev e Ohtake}{BELYAEV; OHTAKE}{2003}
+{BELYAEV, A.; OHTAKE, Y. A comparison of mesh smoothing methods. In:
+  \emph{Israel-Korea Bi-National Conference on Geometric Modeling and Computer
+  Graphics}. Tel-Aviv, Israel: Tel Aviv University, 2003. p. 83--87.}
+
+\bibitem[Boor 1973]{Boor1973}
+\abntrefinfo{Boor}{BOOR}{1973}
+{BOOR, C. de. Good approximation by splines with variables knots {II}.
+\emph{Springer Lecture Notes Series}, Springer-Verlag, Berlin, v.~363, 1973.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$ftp://ftp.cs.wisc.edu/Approx/goodappr.pdf$>$}{ftp://ftp.cs.wisc.edu/Approx/goodappr.pdf}.
+  Acesso em: 30/04-2013.}
+
+\bibitem[Brewer et al. 2003]{Brewer2003}
+\abntrefinfo{Brewer et al.}{BREWER et al.}{2003}
+{BREWER, M.; DIACHIN, L.~F.; KNUPP, P.; LEURENT, T.; MELANDER, D. The mesquite
+  mesh quality improvement toolkit. In:  \emph{Proceedings of 12th
+  International Meshing Roundtable}. Santa Fe, New Mexico, U.S.A.: Sandia
+  National Laboratories, 2003.  (IMR), p. 239--250. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.imr\-.sandia\-.gov\-/papers\-/abstracts\-/Br280\-.html$>$}{http://www.imr.sandia.gov/papers/abstracts/Br280.html}.}
+
+\bibitem[Bruchon, Digonnet e Coupez 2009]{Bruchon2009}
+\abntrefinfo{Bruchon, Digonnet e Coupez}{BRUCHON; DIGONNET; COUPEZ}{2009}
+{BRUCHON, J.; DIGONNET, H.; COUPEZ, T. {Using a signed distance function for
+  the simulation of metal forming processes : Formulation of the contact
+  condition and mesh adaptation. From a Lagrangian approach to an Eulerian
+  approach}.
+\emph{International Journal for Numerical Methods in Engineering}, v.~78, n.~8,
+  p. 980--1008, May 2009.
+ACL205 ACL205.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/hal-emse\-.ccsd\-.cnrs\-.fr\-/emse-00475556$>$}{http://hal-emse.ccsd.cnrs.fr/emse-00475556}.}
+
+\bibitem[Budd, Huang e Russell 2009]{Huang2009}
+\abntrefinfo{Budd, Huang e Russell}{BUDD; HUANG; RUSSELL}{2009}
+{BUDD, C.~J.; HUANG, W.; RUSSELL, R.~D. Adaptivity with moving grids.
+\emph{Acta Numerica}, v.~18, n.~18, p. 111--241, September 2009.}
+
+\bibitem[Burden e Faires 2010]{Burden2010}
+\abntrefinfo{Burden e Faires}{BURDEN; FAIRES}{2010}
+{BURDEN, R.~L.; FAIRES, J.~D. \emph{{Numerical analysis}}. 9th. ed. Boston, MA
+  - USA: Thomson Brooks/Cole, 2010. 888~p. Paperback.
+ISBN 0538735643.}
+
+\bibitem[Chagas e Oliveira 2013]{GuilhermeSanderson2013}
+\abntrefinfo{Chagas e Oliveira}{CHAGAS; OLIVEIRA}{2013}
+{CHAGAS, G.~O.; OLIVEIRA, S. L.~G. de.
+\emph{Uma verificação de desempenho do m\'etodo dos gradientes conjugados com
+  redu\c{c}\~ao de banda pelo m\'etodo Cuthill-Mckee reverso com v\'ertice
+  pseudo-perif\'erico pelo algoritmo de George-Liu}.
+51~p. Monografia (Gradua\c{c}\~ao em Ci\^encia da Computa\c{c}\~ao) ---
+  Universidade Federal de Lavras - UFLA, Lavras, Brazil, 2013.}
+
+\bibitem[Chen e Xu 2004]{Chen2004}
+\abntrefinfo{Chen e Xu}{CHEN; XU}{2004}
+{CHEN, L.; XU, J. Optimal {Delaunay} triangulations.
+\emph{Journal of Computational Mathematics}, v. 22(2), p. 299--308, 2004.}
+
+\bibitem[Comp\'ere et al. 2010]{Compere2010}
+\abntrefinfo{Comp\'ere et al.}{COMP\'ERE et al.}{2010}
+{COMP\'ERE, G.; REMACLE, J.-F.; JANSSON, J.; HOFFMAN, J. A mesh adaptation
+  framework for dealing with large deforming meshes.
+\emph{International Journal for Numerical Methods in Engineering}, John Wiley
+  \& Sons, Ltd., v.~82, n.~7, p. 843--867, 2010.
+ISSN 1097-0207.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1002\-/nme\-.2788$>$}{http://dx.doi.org/10.1002/nme.2788}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Courant, Friedrichs e Lewy 1928]{Courant1928}
+\abntrefinfo{Courant, Friedrichs e Lewy}{COURANT; FRIEDRICHS; LEWY}{1928}
+{COURANT, R.; FRIEDRICHS, K.; LEWY, H. \"uber die partiellen
+  differenzengleichungen der mathematischen physik.
+\emph{Mathematische Annalen (in German)}, v.~100, n.~1, p. 32--74, 1928.}
+
+\bibitem[Cuthill e McKee 1969]{Cuthill1969}
+\abntrefinfo{Cuthill e McKee}{CUTHILL; MCKEE}{1969}
+{CUTHILL, E.; MCKEE, J. Reducing the bandwidth of sparse symmetric matrices.
+  In:  \emph{Proceedings of the 1969 24th national conference}. New York, NY,
+  USA: ACM, 1969.  (ACM '69), p. 157--172. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/800195\-.805928$>$}{http://doi.acm.org/10.1145/800195.805928}.}
+
+\bibitem[Dam e Zegeling 2006]{Van2006}
+\abntrefinfo{Dam e Zegeling}{DAM; ZEGELING}{2006}
+{DAM, A. van; ZEGELING, P.~A. A robust moving mesh finite volume method applied
+  to 1d hyperbolic conservation laws from magnetohydrodynamics.
+\emph{J. Comput. Phys.}, Academic Press Professional, Inc., San Diego, CA, USA,
+  v.~216, n.~2, p. 526--546, ago. 2006.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1016\-/j\-.jcp\-.2005\-.12\-.014$>$}{http://dx.doi.org/10.1016/j.jcp.2005.12.014}.}
+
+\bibitem[Delaunay 1939]{Delaunay1939}
+\abntrefinfo{Delaunay}{DELAUNAY}{1939}
+{DELAUNAY, B. Sur la sph\`{e}re vide, izvestia akademii nauk sssr, otdelenie
+  matematicheskikh i estestvennykh nauk.
+\emph{zvestiia Akademii nauk SSSR. Seriia biologicheskaia = Bulletin de
+  l'Academie des Sciences de l'USSR. Serie biologique}, Izd-vo Akademii nauk
+  SSSR, Moscow, p. 793--800, 1939.}
+
+\bibitem[Desbrun et al. 1999]{Desbrun1999}
+\abntrefinfo{Desbrun et al.}{DESBRUN et al.}{1999}
+{DESBRUN, M.; MEYER, M.; SCHR\"{o}DER, P.; BARR, A.~H. Implicit fairing of
+  irregular meshes using diffusion and curvature flow. In:  \emph{Proceedings
+  of the 26th Annual Conference on Computer Graphics and Interactive
+  Techniques}. New York, NY, USA: ACM Press/Addison-Wesley Publishing Co.,
+  1999.  (SIGGRAPH '99), p. 317--324.
+ISBN 0-201-48560-5. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1145\-/311535\-.311576$>$}{http://dx.doi.org/10.1145/311535.311576}.}
+
+\bibitem[Diachin et al. 2006]{Diachin2006}
+\abntrefinfo{Diachin et al.}{DIACHIN et al.}{2006}
+{DIACHIN, L.~F.; KNUPP, P.~M.; MUNSON, T.~S.; SHONTZ, S.~M. A comparison of two
+  optimization methods for mesh quality improvement.
+\emph{Eng. Comput. (Lond.)}, v.~22, n.~2, p. 61--74, 2006.}
+
+\bibitem[Dobrzynski e Frey 2008]{Frey2008}
+\abntrefinfo{Dobrzynski e Frey}{DOBRZYNSKI; FREY}{2008}
+{DOBRZYNSKI, C.; FREY, P. Anisotropic {D}elaunay mesh adaptation for unsteady
+  simulations. In:  GARIMELLA, R. (Ed.). \emph{Proceedings of the 17th
+  International Meshing Roundtable}. Springer Berlin Heidelberg, 2008. p.
+  177--194.
+ISBN 978-3-540-87920-6.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.ljll\-.math\-.upmc\-.fr\-/frey\-/publications\-/imrDF2\-.pdf$>$}{http://www.ljll.math.upmc.fr/frey/publications/imrDF2.pdf}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[{Duffell} e {MacFadyen} 2011]{Duffell2011}
+\abntrefinfo{{Duffell} e {MacFadyen}}{{Duffell}; {MacFadyen}}{2011}
+{{Duffell}, P.~C.; {MacFadyen}, A.~I. {TESS: A Relativistic Hydrodynamics Code
+  on a Moving Voronoi Mesh}.
+\emph{Astrophysical Journal Supplement Series}, v.~197, p.~15, dez. 2011.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/adsabs\-.harvard\-.edu\-/abs\-/2011ApJS\-.\-.197\-.\-.\-.15D$>$}{http://adsabs.harvard.edu/abs/2011ApJS..197...15D}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Dwyer, Raiszadeh e Otey 1981]{Dwyer1981}
+\abntrefinfo{Dwyer, Raiszadeh e Otey}{DWYER; RAISZADEH; OTEY}{1981}
+{DWYER, H.; RAISZADEH, F.; OTEY, G. A study of reactive diffusion problems with
+  stiff integrators and adaptive grids. In:  REYNOLDS, W.; MACCORMACK, R.
+  (Ed.). \emph{Seventh International Conference on Numerical Methods in Fluid
+  Dynamics}. Springer Berlin Heidelberg, 1981,  (Lecture Notes in Physics,
+  v.~141). p. 170--175.
+ISBN 978-3-540-10694-4.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1007\-/3-540-10694-4{\textbackslash}\underline{\
+  }24$>$}{http://dx.doi.org/10.1007/3-540-10694-4\_24}.}
+
+\bibitem[Dwyer, Sanders e Kee 1979]{Dwyer1979}
+\abntrefinfo{Dwyer, Sanders e Kee}{DWYER; SANDERS; KEE}{1979}
+{DWYER, H.; SANDERS, B.; KEE, R. An adaptive grid method for problems in fluid
+  mechanics and heat transfer. In:  . Williamsburg, Virginia: American
+  Institute of Aeronautics and Astronautics, 1979. p. 195--203.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/opac\-.inria\-.fr\-/record=b1070874$>$}{http://opac.inria.fr/record=b1070874}.}
+
+\bibitem[Eleftheriou 2011]{Eleftheriou2011}
+\abntrefinfo{Eleftheriou}{ELEFTHERIOU}{2011}
+{ELEFTHERIOU, T.
+\emph{Moving Mesh Methods using monitor functions for the Porous Medium
+  Equation}.
+60~p. Tese ({PhD} em Matem\'atica) --- University of Reading, 2011.}
+
+\bibitem[Fousse et al. 2007]{MPFR2007}
+\abntrefinfo{Fousse et al.}{FOUSSE et al.}{2007}
+{FOUSSE, L.; HANROT, G.; LEF{\'E}VRE, V.; P{\'E}LISSIER, P.; ZIMMERMANN, P.
+  {MPFR}: A multiple-precision binary floating-point library with correct
+  rounding.
+\emph{{ACM} Transactions on Mathematical Software}, v.~33, n.~2, p.
+  13:1--13:15, jun. 2007.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/1236463\-.1236468$>$}{http://doi.acm.org/10.1145/1236463.1236468}.}
+
+\bibitem[Freitag 1997]{Freitag1997}
+\abntrefinfo{Freitag}{FREITAG}{1997}
+{FREITAG, L.~A. On combining laplacian and optimization-based mesh smoothing
+  techniques. In:  \emph{Trends in unstructured mesh generation}. USA: AMD
+  Trends in Unstructured Mesh Generation, 1997.  (ASME, v.~220), p. 37--43.}
+
+\bibitem[Freitag, Jones e Plassmann 1997]{Freitag1997a}
+\abntrefinfo{Freitag, Jones e Plassmann}{FREITAG; JONES; PLASSMANN}{1997}
+{FREITAG, L.~A.; JONES, M.; PLASSMANN, P.~E. A parallel algorithm for mesh
+  smoothing. In:  \emph{PPSC}. SIAM, 1997.
+ISBN 0-89871-395-1. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/conf\-/ppsc\-/ppsc1997\-.html$>$}{http://dblp.uni-trier.de/db/conf/ppsc/ppsc1997.html}.}
+
+\bibitem[Frey e George 2008]{George2008}
+\abntrefinfo{Frey e George}{FREY; GEORGE}{2008}
+{FREY, P.~J.; GEORGE, P.-L. (Ed.). \emph{Mesh Generation}. 2. ed. London:
+  {ISTE} Ltd., 2008. 848~p.
+ISBN 9781848210295.}
+
+\bibitem[George, Liu e Ng 1994]{George1994}
+\abntrefinfo{George, Liu e Ng}{GEORGE; LIU; NG}{1994}
+{GEORGE, A.; LIU, J.; NG, E. \emph{Computer Solution of Sparse Linear Systems}.
+  1994.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.cs\-.illinois\-.edu\-/{\textbackslash}\~{}heath\-/courses\-/cs598mh\-/george\underline{\
+  }liu\-.pdf$>$}{http://www.cs.illinois.edu/\~heath/courses/cs598mh/george_liu.pdf}.}
+
+\bibitem[George e Liu 1979]{George1979}
+\abntrefinfo{George e Liu}{GEORGE; LIU}{1979}
+{GEORGE, A.; LIU, J. W.~H. An implementation of a pseudoperipheral node finder.
+\emph{ACM Trans. Math. Softw.}, ACM, New York, NY, USA, v.~5, n.~3, p.
+  284--295, set. 1979.
+ISSN 0098-3500.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/355841\-.355845$>$}{http://doi.acm.org/10.1145/355841.355845}.}
+
+\bibitem[George 1971]{George1971}
+\abntrefinfo{George}{GEORGE}{1971}
+{GEORGE, J.~A.
+\emph{Computer implementation of the finite element method}.
+222~p. Tese (Computer Science: Finite Element Methods) --- Stanford Univertity
+  - Department of Computer Science, 1971.}
+
+\bibitem[Gnoffo 1980]{Gnoffo1980}
+\abntrefinfo{Gnoffo}{GNOFFO}{1980}
+{GNOFFO, P. Complete supersonic flowfields over blunt bodies in a generalized
+  orthogonal coordinate system.
+\emph{American Institute of Aeronautics and Astronautics}, v.~18, n.~6, p.
+  611--612, 1980.}
+
+\bibitem[Granlund e team 2012]{GMP2012}
+\abntrefinfo{Granlund e team}{GRANLUND; TEAM}{2012}
+{GRANLUND, T.; TEAM the GMP~development. \emph{{GNU MP: The GNU Multiple
+  Precision Arithmetic Library}}.
+5.0.5. ed. USA, 2012. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/gmplib\-.org\-/$>$}{http://gmplib.org/}.}
+
+\bibitem[Green e Sibson 1978]{Green1978}
+\abntrefinfo{Green e Sibson}{GREEN; SIBSON}{1978}
+{GREEN, P.~J.; SIBSON, R. Computing dirichlet tessellations in the plane.
+\emph{The Computer Journal}, v.~21, n.~2, p. 168--173, 1978.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/comjnl\-.oxfordjournals\-.org\-/content\-/21\-/2\-/168\-.abstract$>$}{http://comjnl.oxfordjournals.org/content/21/2/168.abstract}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Greif et al. 2011]{Greif2011}
+\abntrefinfo{Greif et al.}{GREIF et al.}{2011}
+{GREIF, T.~H.; SPRINGEL, V.; WHITE, S. D.~M.; GLOVER, S. C.~O.; CLARK, P.~C.;
+  SMITH, R.~J.; KLESSEN, R.~S.; BROMM, V. Simulations on a moving mesh: The
+  clustered formation of population {III} protostars.
+\emph{The Astrophysical Journal}, v.~737, n.~2, p.~75, 2011.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/stacks\-.iop\-.org\-/0004-637X\-/737\-/i=2\-/a=75$>$}{http://stacks.iop.org/0004-637X/737/i=2/a=75}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Hawken, Gottlieb e Hansen 1991]{Hawken1991}
+\abntrefinfo{Hawken, Gottlieb e Hansen}{HAWKEN; GOTTLIEB; HANSEN}{1991}
+{HAWKEN, D.; GOTTLIEB, J.; HANSEN, J. Review of some adaptive node-movement
+  techniques in finite-element and finite-difference solutions of partial
+  differential equations.
+\emph{Journal of Computational Physics}, v.~95, n.~2, p. 254--302, 1991.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/002199919190277R$>$}{http://www.sciencedirect.com/science/article/pii/002199919190277R}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[{He{\ss}} e {Springel} 2010]{Hes2010}
+\abntrefinfo{{He{\ss}} e {Springel}}{{He{\ss}}; {Springel}}{2010}
+{{He{\ss}}, S.; {Springel}, V. {Particle hydrodynamics with tessellation
+  techniques}.
+\emph{Monthly Notices of the Royal Astronomical Society}, v.~406, p.
+  2289--2311, August 2010.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/adsabs\-.harvard\-.edu\-/abs\-/2010MNRAS\-.406\-.2289H$>$}{http://adsabs.harvard.edu/abs/2010MNRAS.406.2289H}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[{He{\ss}} e Springel 2012]{Hes2012}
+\abntrefinfo{{He{\ss}} e Springel}{{He{\ss}}; SPRINGEL}{2012}
+{{He{\ss}}, S.; SPRINGEL, V. {Gas stripping and mixing in galaxy clusters: A
+  numerical comparison study}.
+\emph{Monthly Notices of the Royal Astronomical Society}, v.~426, p.
+  3112--3134, November 2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/arxiv\-.org\-/abs\-/1208\-.0351$>$}{http://arxiv.org/abs/1208.0351}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Hestenes e Stiefel 1952]{Hestenes1952}
+\abntrefinfo{Hestenes e Stiefel}{HESTENES; STIEFEL}{1952}
+{HESTENES, M.~R.; STIEFEL, E. {Methods of Conjugate Gradients for Solving
+  Linear Systems}.
+\emph{Journal of Research of the National Bureau of Standards}, v.~49, p.
+  409--436, dez. 1952.}
+
+\bibitem[Huang, Ren e Russell 1994]{Huang1994A}
+\abntrefinfo{Huang, Ren e Russell}{HUANG; REN; RUSSELL}{1994}
+{HUANG, W.; REN, Y.; RUSSELL, R.~D. Moving mesh partial differential equations
+  (mmpdes) based on the equidistribution principle.
+\emph{SIAM J. Numer. Anal.}, Society for Industrial and Applied Mathematics,
+  Philadelphia, PA, USA, v.~31, n.~3, p. 709--730, jun. 1994.
+ISSN 0036-1429.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1137\-/0731038$>$}{http://dx.doi.org/10.1137/0731038}.}
+
+\bibitem[Huang e Russell 2011]{Huang2011}
+\abntrefinfo{Huang e Russell}{HUANG; RUSSELL}{2011}
+{HUANG, W.; RUSSELL, R. \emph{Adaptive moving mesh methods}. 1. ed. New York:
+  Springer, 2011. 432~p.  (Applied mathematical sciences).
+ISBN 978-1-4419-7915-5.}
+
+\bibitem[Huang e Russell 1999]{Huang1999}
+\abntrefinfo{Huang e Russell}{HUANG; RUSSELL}{1999}
+{HUANG, W.; RUSSELL, R.~D. Moving mesh strategy based on a gradient flow
+  equation for two-dimensional problems.
+\emph{SIAM Journal on Scientific Computing}, Society for Industrial and Applied
+  Mathematics, Philadelphia, PA, USA, v.~20, n.~3, p. 998--1015, jan. 1999.
+ISSN 1064-8275.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1137\-/S1064827596315242$>$}{http://dx.doi.org/10.1137/S1064827596315242}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Huang e Sun 2003]{Huang2003}
+\abntrefinfo{Huang e Sun}{HUANG; SUN}{2003}
+{HUANG, W.; SUN, W. Variational mesh adaptation \uppercase{II}: error estimates
+  and monitor functions.
+\emph{Journal of Computational Physics}, v.~184, n.~2, p. 619--648, 2003.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0021999102000402$>$}{http://www.sciencedirect.com/science/article/pii/S0021999102000402}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Jones 1974]{Jones1974}
+\abntrefinfo{Jones}{JONES}{1974}
+{JONES, R.~E. A self-organizing mesh generation program.
+Jornal of Pressure Vessel Tech., v.~96, n.~3, p. 193--199, August 1974.}
+
+\bibitem[Kim e Rossignac 2004]{Kim2004}
+\abntrefinfo{Kim e Rossignac}{KIM; ROSSIGNAC}{2004}
+{KIM, B.; ROSSIGNAC, J. Localized bi-laplacian solver on a triangle mesh and
+  its applications.
+\emph{GVU Technical Report Number}, Georgia Institute of Technology, p.~11,
+  December 2004.}
+
+\bibitem[Knupp 2001]{Knupp2001}
+\abntrefinfo{Knupp}{KNUPP}{2001}
+{KNUPP, P.~M. Algebraic mesh quality metrics.
+\emph{SIAM J. Sci. Comput.}, Society for Industrial and Applied Mathematics,
+  Philadelphia, PA, USA, v.~23, n.~1, p. 193--218, jan. 2001.
+ISSN 1064-8275.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1137\-/S1064827500371499$>$}{http://dx.doi.org/10.1137/S1064827500371499}.}
+
+\bibitem[Kobbelt et al. 1998]{Kobbelt1998}
+\abntrefinfo{Kobbelt et al.}{KOBBELT et al.}{1998}
+{KOBBELT, L.; CAMPAGNA, S.; VORSATZ, J.; SEIDEL, H.-P. Interactive
+  multi-resolution modeling on arbitrary meshes. In:  \emph{Proceedings of the
+  25th Annual Conference on Computer Graphics and Interactive Techniques}. New
+  York, NY, USA: ACM, 1998.  (SIGGRAPH '98), p. 105--114.
+ISBN 0-89791-999-8. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/280814\-.280831$>$}{http://doi.acm.org/10.1145/280814.280831}.}
+
+\bibitem[Lange e Polthier 2005]{Lange2005}
+\abntrefinfo{Lange e Polthier}{LANGE; POLTHIER}{2005}
+{LANGE, C.; POLTHIER, K. Anisotropic smoothing of point sets. In:  . Amsterdam,
+  The Netherlands, The Netherlands: Elsevier Science Publishers B. V., 2005.
+  v.~22, n.~7, p. 680--692.
+ISSN 0167-8396. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1016\-/j\-.cagd\-.2005\-.06\-.010$>$}{http://dx.doi.org/10.1016/j.cagd.2005.06.010}.}
+
+\bibitem[Lawson 1977]{Lawson1977}
+\abntrefinfo{Lawson}{LAWSON}{1977}
+{LAWSON, C.~L. Software for {C}$^1$ surface interpolation. In:  . Washington,
+  DC: National Aeronautics and space administration, 1977,  (Matematical
+  Software {III}, v.~3). p. 161--194.}
+
+\bibitem[Li, Tang e Zhang 2001]{Li2000}
+\abntrefinfo{Li, Tang e Zhang}{LI; TANG; ZHANG}{2001}
+{LI, R.; TANG, T.; ZHANG, P. Moving mesh methods in multiple dimensions based
+  on harmonic maps.
+\emph{Journal of Computational Physics}, v.~170, n.~2, p. 562--588, July 2001.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.math\-.hkbu\-.edu\-.hk\-/\~{}ttang\-/moving\-.html$>$}{http://www.math.hkbu.edu.hk/~ttang/moving.html}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Littlefield 2001]{Littlefield2001}
+\abntrefinfo{Littlefield}{LITTLEFIELD}{2001}
+{LITTLEFIELD, D.~L. The use of r-adaptivity with local, intermittent remesh for
+  modeling hypervelocity impact and penetration.
+\emph{International Journal of Impact Engineering}, v.~26, n. 1–10, p. 433 --
+  442, 2001.
+ISSN 0734-743X.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0734743X01000938$>$}{http://www.sciencedirect.com/science/article/pii/S0734743X01000938}.}
+
+\bibitem[Liu e Shen 2003]{Shen2003}
+\abntrefinfo{Liu e Shen}{LIU; SHEN}{2003}
+{LIU, C.; SHEN, J. A phase field model for the mixture of two incompressible
+  fluids and its approximation by a fourier-spectral method.
+\emph{Physica D: Nonlinear Phenomena}, v.~179, n.~3-4, p. 211--228, 2003.
+ISSN 0167-2789.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0167278903000307$>$}{http://www.sciencedirect.com/science/article/pii/S0167278903000307}.}
+
+\bibitem[L\"ohner et al. 1999]{Lohner1999}
+\abntrefinfo{L\"ohner et al.}{L\"OHNER et al.}{1999}
+{L\"OHNER, R.; YANG, C.; BAUM, J.~D.; LUO, H.; PELESSONE, D.; CHARMAN, C.~M.
+  The numerical simulation of strongly unsteady flow with hundreds of moving
+  bodies.
+\emph{International Journal for Numerical Methods in Fluids}, John Wiley \&
+  Sons, Ltd., v.~31, n.~1, p. 113--120, 1999.
+ISSN 1097-0363.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1002\-/(SICI)1097-0363(19990915)31:1<113::AID-FLD958>3\-.0\-.CO;2-Q$>$}{http://dx.doi.org/10.1002/(SICI)1097-0363(19990915)31:1<113::AID-FLD958>3.0.CO;2-Q}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Mackenzie 1996]{Mackenzie1996}
+\abntrefinfo{Mackenzie}{MACKENZIE}{1996}
+{MACKENZIE, J. Moving mesh finite volume methods for one-dimensional
+  evolutionary partial differential equations. In:  \emph{Strathclyde
+  Mathematics Research Report}. Glasgow, Scotland: University of Strathclyde:
+  Department of Mathematics, 1996. p.~26.}
+
+\bibitem[Mackenzie, Robertson e Beckett 2006]{Mackenzie2006}
+\abntrefinfo{Mackenzie, Robertson e Beckett}{MACKENZIE; ROBERTSON;
+  BECKETT}{2006}
+{MACKENZIE, J.; ROBERTSON, M.; BECKETT, M. An r-adaptive finite element method
+  for the solution of the two-dimensional phase-field equations.
+\emph{Communications in computational physics}, v.~1, n.~5, p. 805--826, 2006.
+ISSN 1815-2406.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.global-sci\-.com\-/issue\-/contents\-/1\-/issue5\-.html$>$}{http://www.global-sci.com/issue/contents/1/issue5.html}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Maliska 2010]{Maliska2010}
+\abntrefinfo{Maliska}{MALISKA}{2010}
+{MALISKA, C.~R. \emph{Transfer\^{e}ncia de Calor e Mec\'anica dos Fluidos}. 2.
+  ed. Rio de Janeiro: LTC, 2010. 472~p.}
+
+\bibitem[Marlow 2010]{Marlow2010}
+\abntrefinfo{Marlow}{MARLOW}{2010}
+{MARLOW, R.
+\emph{Moving mesh methods for solving parabolic partial differential
+  equations}.
+146~p. Tese ({PhD} School of Computing) --- Universit of Leeds, 2010.}
+
+\bibitem[Marlow 2011]{Marlow2011}
+\abntrefinfo{Marlow}{MARLOW}{2011}
+{MARLOW, R. Moving mesh methods for solving parabolic partial differential
+  equations.
+10th Conference Series on Numerical Methods for Fluid Dynamics, School of
+  Computing, Leeds, v.~46, n.~1, p. 353--361, July 2011.}
+
+\bibitem[{Maron}, {McNally} e {Mac Low} 2012]{Maron2012}
+\abntrefinfo{{Maron}, {McNally} e {Mac Low}}{{Maron}; {McNally}; {Mac
+  Low}}{2012}
+{{Maron}, J.~L.; {McNally}, C.~P.; {Mac Low}, M.-M. {Phurbas: An Adaptive,
+  Lagrangian, Meshless, Magnetohydrodynamics Code. I. Algorithm}.
+\emph{Astrophysical Journal Supplement Series}, v.~200, p.~6, maio 2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/adsabs\-.harvard\-.edu\-/abs\-/2012ApJS\-.\-.200\-.\-.\-.\-.6M$>$}{http://adsabs.harvard.edu/abs/2012ApJS..200....6M}.
+  Acesso em: 24/04/2013.}
+
+\bibitem[McNally, Lyra e Passy 2012]{Mcnally2012}
+\abntrefinfo{McNally, Lyra e Passy}{MCNALLY; LYRA; PASSY}{2012}
+{MCNALLY, C.~P.; LYRA, W.; PASSY, J.-C. A well-posed kelvin-helmholtz
+  instability test and comparison.
+\emph{The Astrophysical Journal Supplement Series}, v.~201, n.~2, p.~18, ago.
+  2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/adsabs\-.harvard\-.edu\-/abs\-/2012ApJS\-.\-.201\-.\-.\-.18M$>$}{http://adsabs.harvard.edu/abs/2012ApJS..201...18M}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Mu{\~n}oz et al. 2012]{Springel2012}
+\abntrefinfo{Mu{\~n}oz et al.}{MU{\~N}OZ et al.}{2012}
+{MU{\~N}OZ, D.; SPRINGEL, V.; MARCUS, R.; VOGELSBERGER, M.; HERNQUIST, L.
+  \emph{Multi-Dimensional, Compressible Viscous Flow on a Moving Voronoi Mesh}.
+  2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/arxiv\-.org\-/abs\-/1203\-.1037$>$}{http://arxiv.org/abs/1203.1037}.
+  Acesso em: 17/4/2013.}
+
+\bibitem[Niedu 2012]{Niedu2012}
+\abntrefinfo{Niedu}{NIEDU}{2012}
+{NIEDU, G. da S.
+\emph{Um m{\'e}todo para solu\c{c}{\~a}o de sistemas lineares atrav{\'e}s do
+  gradiente conjugado cooperativo}.
+117~p. Disserta\c{c}\~ {a}o de mestrado em engenharia elétrica ---
+  Universidade Federal do Rio de Janeiro, 2012.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/objdig\-.ufrj\-.br\-/60\-/teses\-/coppe{\textbackslash}\underline{\
+  }m\-/GuilhermeDaSilvaNiedu\-.pdf$>$}{http://objdig.ufrj.br/60/teses/coppe\_m/GuilhermeDaSilvaNiedu.pdf}.}
+
+\bibitem[Ohtake, Belyaev e Bogaevski 2001]{Ohtake2001}
+\abntrefinfo{Ohtake, Belyaev e Bogaevski}{OHTAKE; BELYAEV; BOGAEVSKI}{2001}
+{OHTAKE, Y.; BELYAEV, A.~G.; BOGAEVSKI, I. Mesh regularization and adaptive
+  smoothing.
+\emph{Computer-Aided Design}, v.~33, n.~11, p. 789--800, 2001.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/journals\-/cad\-/cad33\-.html$>$}{http://dblp.uni-trier.de/db/journals/cad/cad33.html}.}
+
+\bibitem[Ohtake, Belyaev e Bogaevski 2000]{Ohtake2000}
+\abntrefinfo{Ohtake, Belyaev e Bogaevski}{OHTAKE; BELYAEV; BOGAEVSKI}{2000}
+{OHTAKE, Y.; BELYAEV, A.~G.; BOGAEVSKI, I.~A. Polyhedral surface smoothing with
+  simultaneous mesh regularization. In:  \emph{Proceedings of the Geometric
+  Modeling and Processing 2000}. Washington, DC, USA: IEEE Computer Society,
+  2000.  (GMP '00, 1), p. 229--237. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/conf\-/gmp\-/gmp2000\-.html$>$}{http://dblp.uni-trier.de/db/conf/gmp/gmp2000.html}.}
+
+\bibitem[Oliveira et al. 2013]{Oliveira2013}
+\abntrefinfo{Oliveira et al.}{OLIVEIRA et al.}{2013}
+{OLIVEIRA, F.~S.; OLIVEIRA, S. L.~G. de; KISCHINHEVSKY, M.; TAVARES, J. M.
+  R.~S. {Malhas m\'oveis para solu\c{c}\~ao num\'erica de equa\c{c}\~oes
+  diferenciais parciais}.
+\emph{Revista de Sistemas de Informação da Faculdade Salesiana Maria
+  Auxiliadora - FSMA}, v.~11, p. 11--16, jun. 2013.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.fsma\-.edu\-.br\-/si\-/principal\-.html$>$}{http://www.fsma.edu.br/si/principal.html}.}
+
+\bibitem[Oliveira 2012]{Oliveira2012a}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2012}
+{OLIVEIRA, S. L.~G. de. A review on {D}elaunay refinement techniques. In:
+  \emph{Proceedings of the 12th international conference on Computational
+  Science and Its Applications - Volume Part I}. Berlin, Heidelberg:
+  Springer-Verlag, 2012.  (ICCSA'12), p. 172--187.
+ISBN 978-3-642-31124-6. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1007\-/978-3-642-31125-3{\textbackslash}\underline{\
+  }14$>$}{http://dx.doi.org/10.1007/978-3-642-31125-3\_14}. Acesso em:
+  23/04/2013.}
+
+\bibitem[Oliveira e Oliveira 2012]{TallesSanderson2012a}
+\abntrefinfo{Oliveira e Oliveira}{OLIVEIRA; OLIVEIRA}{2012a}
+{OLIVEIRA, T.~H. de; OLIVEIRA, S. L.~G. de. \emph{{Uma aplica\c{c}{\~a}o de
+  volumes finitos com refinamento de Ruppert e malhas de qualidade por
+  \emph{off-centers}.}}
+Lavras, Brazil, 2012. Pesquisa de inicia\c{c}{\~a}o cient{\'i}fica.}
+
+\bibitem[Oliveira e Oliveira 2012]{TallesSanderson2012}
+\abntrefinfo{Oliveira e Oliveira}{OLIVEIRA; OLIVEIRA}{2012b}
+{\underline{\ \ \ \ \ \ \ \ }. {Uma resolu\c{c}{\~a}o da equa\c{c}{\~a}o de
+  Laplace por Volumes Finitos e diagrama de Voronoi com refinamento adaptativo
+  e de Ruppert}. In:  \emph{{Proceedings of the SIBGRAPI 2012 - International
+  Conference on Graphics, Patterns and Images - Workshop of Undergraduate Works
+  (WUW)}}. Ouro Preto: SBC, 2012.}
+
+\bibitem[Olivier e Alauzet 2011]{Olivier2011}
+\abntrefinfo{Olivier e Alauzet}{OLIVIER; ALAUZET}{2011}
+{OLIVIER, G.; ALAUZET, F. A new changing-topology ale scheme for moving mesh
+  unsteady simulations. In:  \emph{Proceedings of 49th {AIAA} Aerospace
+  Sciences Meeting and Exhibit}. Gamma Project, {INRIA Rocquencourt}, 78 153
+  {L}e {C}hesnay, {F}rance: AIAA, 2011.  (AIAA-2011-0474), p. 1--25.
+  Dispon{\'\i}vel em:
+  $<$https:\-/\-/www\-.rocq\-.inria\-.fr\-/gamma\-/gamma\-/Membres\-/CIPD\-/Frederic\-.Alauzet$>$.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Pakmor, Bauer e Springel 2011]{Pakmor2011}
+\abntrefinfo{Pakmor, Bauer e Springel}{PAKMOR; BAUER; SPRINGEL}{2011}
+{PAKMOR, R.; BAUER, A.; SPRINGEL, V. Magnetohydrodynamics on an unstructured
+  moving grid.
+Institut f\"ur Theoretische Studien - Heidelberg, Germany, v.~418, n.
+  arXiv:1108.1792, p. 1392--1401, December 2011.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/arxiv\-.org\-/abs\-/1108\-.1792$>$}{http://arxiv.org/abs/1108.1792}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[P{\'e}bay e Baker 2003]{Pebay2003}
+\abntrefinfo{P{\'e}bay e Baker}{P{\'E}BAY; BAKER}{2003}
+{P{\'E}BAY, P.~P.; BAKER, T.~J. Analysis of triangle quality measures.
+\emph{Math. Comput.}, American Mathematical Society, Boston, MA, USA, v.~72,
+  n.~244, p. 1817--1839, oct 2003.
+ISSN 0025-5718.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1090\-/S0025-5718-03-01485-6$>$}{http://dx.doi.org/10.1090/S0025-5718-03-01485-6}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Popiolek e Awruch 2009]{Popiolek2009}
+\abntrefinfo{Popiolek e Awruch}{POPIOLEK; AWRUCH}{2009}
+{POPIOLEK, T.~L.; AWRUCH, A.~M. An adaptive mesh strategy for transient flows
+  simulations.
+\emph{Computational Modeling, Southern Conference on}, IEEE Computer Society,
+  Los Alamitos, CA, USA, v.~1, n.~3, p. 71--76, November 2009.}
+
+\bibitem[Preparata e Shamos 1985]{Preparata1985}
+\abntrefinfo{Preparata e Shamos}{PREPARATA; SHAMOS}{1985}
+{PREPARATA, F.~P.; SHAMOS, M.~I. \emph{Computational Geometry: an
+  introduction}. New York: Springer Verlag, 1985. 398~p.  (Scientific
+  Computation).
+ISBN 0387961313.}
+
+\bibitem[Rajagopal, Gangadharan e Sivakumar 2006]{Rajagopal2006}
+\abntrefinfo{Rajagopal, Gangadharan e Sivakumar}{RAJAGOPAL; GANGADHARAN;
+  SIVAKUMAR}{2006}
+{RAJAGOPAL, A.; GANGADHARAN, R.; SIVAKUMAR, S.~M. A performance study on
+  configurational force and spring-analogy based mesh optimization schemes.
+\emph{International Journal for Computational Methods in Engineering Science
+  and Mechanics}, v.~7, n.~4, p. 241--262, 2006.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.tandfonline\-.com\-/doi\-/abs\-/10\-.1080\-/15502280500388169$>$}{http://www.tandfonline.com/doi/abs/10.1080/15502280500388169}.}
+
+\bibitem[Rajagopal e Sivakumar 2007]{Rajagopal2007}
+\abntrefinfo{Rajagopal e Sivakumar}{RAJAGOPAL; SIVAKUMAR}{2007}
+{RAJAGOPAL, A.; SIVAKUMAR, S.~M. A combined r-h adaptive strategy based on
+  material forces and error assessment for plane problems and bimaterial
+  interfaces.
+\emph{Computational Mechanics}, Springer-Verlag, v.~41, n.~1, p. 49--72, March
+  2007.
+ISSN 0178-7675.}
+
+\bibitem[Ruppert 1995]{Ruppert1995}
+\abntrefinfo{Ruppert}{RUPPERT}{1995}
+{RUPPERT, J. A {Delaunay} refinement algorithm for quality 2-dimensional mesh
+  generation.
+\emph{J. Algorithms}, Academic Press, Inc., Duluth, MN, USA, v.~18, n.~3, p.
+  548--585, maio 1995.
+ISSN 0196-6774.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1006\-/jagm\-.1995\-.1021$>$}{http://dx.doi.org/10.1006/jagm.1995.1021}.}
+
+\bibitem[Schneider, Kobbelt e Seidel 2001]{Schneider2001}
+\abntrefinfo{Schneider, Kobbelt e Seidel}{SCHNEIDER; KOBBELT; SEIDEL}{2001}
+{SCHNEIDER, R.; KOBBELT, L.; SEIDEL, H.-P. Improved bi-laplacian mesh fairing.
+  In:  LYCHE, T.; SCHUMAKER, L.~L. (Ed.). \emph{Mathematical Methods for Curves
+  and Surfaces: Oslo 2000}. Oslo, Norway: Vanderbilt University, 2001,
+  (Innovations in Applied Mathematics, 1). cap. Improved bi-Laplacian Mesh
+  Fairing, p. 445--454.
+ISBN 0-8265-1378-6.}
+
+\bibitem[Shamos e Hoey 1975]{Shamos1975}
+\abntrefinfo{Shamos e Hoey}{SHAMOS; HOEY}{1975}
+{SHAMOS, M.~I.; HOEY, D. Closest-point problems. In:  \emph{Proceedings of the
+  16th Annual Symposium on Foundations of Computer Science}. Washington, DC,
+  USA: IEEE Computer Society, 1975. p. 151--162. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dl\-.acm\-.org\-/citation\-.cfm?id=1398504\-.1382488$>$}{http://dl.acm.org/citation.cfm?id=1398504.1382488}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Shewchuk 1997]{Shewchuk1997}
+\abntrefinfo{Shewchuk}{SHEWCHUK}{1997}
+{SHEWCHUK, J.~R.
+\emph{{Delaunay} {R}efinement {M}esh {G}eneration}.
+207~p. Tese (Doutorado) --- School of Computer Science, Carnegie Mellon
+  University, Pittsburgh, Pennsylvania, maio 1997. Available as Technical
+  Report CMU-CS-97-137.}
+
+\bibitem[Shontz e Vavasis 2004]{Shontz2006}
+\abntrefinfo{Shontz e Vavasis}{SHONTZ; VAVASIS}{2004}
+{SHONTZ, S.~M.; VAVASIS, S.~A. A linear weighted laplacian smoothing framework
+  for warping tetrahedral meshes.
+\emph{CoRR}, cs.NA/0410045, 2004.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/journals\-/corr\-/corr0410\-.html\underline{\
+  }cs-NA-0410045$>$}{http://dblp.uni-trier.de/db/journals/corr/corr0410.html_cs-NA-0410045}.}
+
+\bibitem[Silva et al. 2012]{Silva2012}
+\abntrefinfo{Silva et al.}{SILVA et al.}{2012}
+{SILVA, L.~F.; SCHEIDEGGER, L.~F.; ETIENE, T.; COMBA, J.~a. L.~D.; NONATO,
+  L.~G.; SILVA, C.~T. Connectivity oblivious merging of triangulations. In:
+  \emph{{SIBGRAPI}}. {IEEE} Computer Society, 2012. p. 118--125.
+ISBN 978-1-4673-2802-9. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/conf\-/sibgrapi\-/sibgrapi2012\-.html$>$}{http://dblp.uni-trier.de/db/conf/sibgrapi/sibgrapi2012.html}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Soni et al. 2000]{Soni2000}
+\abntrefinfo{Soni et al.}{SONI et al.}{2000}
+{SONI, B.~K.; KOOMULLIL, R.; THOMPSON, D.~S.; THORNBURG, H. {Solution adaptive
+  grid strategies based on point redistribution}.
+\emph{Computer Methods in Applied Mechanics and Engineering}, v.~189, n.~4, p.
+  1183--1204, September 2000.}
+
+\bibitem[Springel 2005]{Springel2005}
+\abntrefinfo{Springel}{SPRINGEL}{2005}
+{SPRINGEL, V. {The cosmological simulation code GADGET-2}.
+\emph{Monthly Notices of the Royal Astronomical Society}, v.~364, p.
+  1105--1134, dez. 2005.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/adsabs\-.harvard\-.edu\-/abs\-/2005MNRAS\-.364\-.1105S$>$}{http://adsabs.harvard.edu/abs/2005MNRAS.364.1105S}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Springel 2009]{Springel2009}
+\abntrefinfo{Springel}{SPRINGEL}{2009}
+{\underline{\ \ \ \ \ \ \ \ }. {E pur si muove: Galiliean-invariant
+  cosmological hydrodynamical simulations on a moving mesh}.
+\emph{Monthly Notices of the Royal Astronomical Society}, Max-Planck-Institute
+  for Astrophysics, v.~401, p. 791--851, October 2009.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/arxiv\-.org\-/abs\-/0901\-.4107$>$}{http://arxiv.org/abs/0901.4107}.
+  Acesso em: 18/04/2013.}
+
+\bibitem[Springel 2011]{Springel2011}
+\abntrefinfo{Springel}{SPRINGEL}{2011}
+{\underline{\ \ \ \ \ \ \ \ }. \emph{Hydrodynamic simulations on a moving
+  Voronoi mesh}.
+Garching, 2011. v. 1109.2218, n. arXiv:1109.2218, 35~p. Comments: 35 pages, 10
+  figures; invited review for the volume Tessellations in the Sciences:
+  Virtues, Techniques and Applications of Geometric Tilings, Springer
+  (accepted). Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/arxiv\-.org\-/abs\-/1109\-.2218$>$}{http://arxiv.org/abs/1109.2218}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Tan 2007]{Tan2007}
+\abntrefinfo{Tan}{TAN}{2007}
+{TAN, Z. Adaptive moving mesh methods for two-dimensional resistive
+  magneto-hydrodynamic {PDE} models.
+\emph{Computers \& Fluids}, v.~36, n.~4, p. 758 -- 771, 2007.
+ISSN 0045-7930.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0045793006000831$>$}{http://www.sciencedirect.com/science/article/pii/S0045793006000831}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Tan, Lim e Khoo 2007]{Tan2007A}
+\abntrefinfo{Tan, Lim e Khoo}{TAN; LIM; KHOO}{2007}
+{TAN, Z.; LIM, K.~M.; KHOO, B.~C. An adaptive mesh redistribution method for
+  the incompressible mixture flows using phase-field model.
+\emph{Journal of Computational Physics}, Academic Press Professional, Inc., San
+  Diego, CA, USA, v.~225, n.~1, p. 1137--1158, July 2007.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1016\-/j\-.jcp\-.2007\-.01\-.019$>$}{http://dx.doi.org/10.1016/j.jcp.2007.01.019}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Tan, Tang e Zhang 2006]{Tan2006}
+\abntrefinfo{Tan, Tang e Zhang}{TAN; TANG; ZHANG}{2006}
+{TAN, Z.; TANG, T.; ZHANG, Z. A simple moving mesh method for one-and
+  two-dimensional phase-field equations.
+\emph{J. Comput. Appl. Math.}, Elsevier Science Publishers B. V., Amsterdam,
+  The Netherlands, The Netherlands, v.~190, n.~1, p. 252--269, jun. 2006.
+ISSN 0377-0427.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1016\-/j\-.cam\-.2005\-.01\-.042$>$}{http://dx.doi.org/10.1016/j.cam.2005.01.042}.}
+
+\bibitem[Tan et al. 2004]{Tan2004}
+\abntrefinfo{Tan et al.}{TAN et al.}{2004}
+{TAN, Z.; ZHANG, Z.; HUANG, Y.; TANG, T. Moving mesh methods with locally
+  varying time steps.
+\emph{Journal of Computational Physics}, v.~200, n.~1, p. 347 -- 367, 2004.
+ISSN 0021-9991.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0021999104001706$>$}{http://www.sciencedirect.com/science/article/pii/S0021999104001706}.}
+
+\bibitem[Tang 2005]{Tang2005}
+\abntrefinfo{Tang}{TANG}{2005}
+{TANG, T. \emph{Moving Mesh Methods for Computational Fluid Dynamics}. Hong
+  Kong: Department of Mathematics, Hong Kong Baptist University, 2005. 33~p.
+  (Technical report).}
+
+\bibitem[Tannehill, Anderson e Pletcher 1997]{Tannehill1997}
+\abntrefinfo{Tannehill, Anderson e Pletcher}{TANNEHILL; ANDERSON;
+  PLETCHER}{1997}
+{TANNEHILL, J.; ANDERSON, D.; PLETCHER, R. \emph{Computational Fluid Mechanics
+  and Heat Transfer, Second Edition}. Washington, DC: Taylor \& Francis, 1997.
+  792~p.  (Series in Computational and Physical Processes in Mechanics and
+  Thermal Sciences).
+ISBN 9781560320463.}
+
+\bibitem[Taubin 1995]{Taubin1995}
+\abntrefinfo{Taubin}{TAUBIN}{1995a}
+{TAUBIN, G. Curve and surface smoothing without shrinkage. In:
+  \emph{Proceedings of the Fifth International Conference on Computer Vision}.
+  Washington, DC, USA: IEEE Computer Society, 1995.  (ICCV '95, v.~5), p.
+  852--857.
+ISBN 0-8186-7042-8. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dl\-.acm\-.org\-/citation\-.cfm?id=839277\-.840029$>$}{http://dl.acm.org/citation.cfm?id=839277.840029}.}
+
+\bibitem[Taubin 1995]{Taubin1995A}
+\abntrefinfo{Taubin}{TAUBIN}{1995b}
+{\underline{\ \ \ \ \ \ \ \ }. A signal processing approach to fair surface
+  design. In:  \emph{Proceedings of the 22Nd Annual Conference on Computer
+  Graphics and Interactive Techniques}. New York, NY, USA: ACM, 1995.
+  (SIGGRAPH '95), p. 351--358.
+ISBN 0-89791-701-4. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/doi\-.acm\-.org\-/10\-.1145\-/218380\-.218473$>$}{http://doi.acm.org/10.1145/218380.218473}.}
+
+\bibitem[Taubin, Shang e Golub 1996]{Taubin1996}
+\abntrefinfo{Taubin, Shang e Golub}{TAUBIN; SHANG; GOLUB}{1996}
+{TAUBIN, G.; SHANG, T.; GOLUB, G. Optimal surface smoothing as filter desing.
+  In:  BUXTON, B.; CIPOLLA, R. (Ed.). \emph{Proceedings of the 4th European
+  Conference on Computer Vision}. London, UK: Springer-Verlag, 1996.  (Lecture
+  Notes in Computer Science, Volume 1), p. 283--292. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dl\-.acm\-.org\-/citation\-.cfm?id=645309\-.648954$>$}{http://dl.acm.org/citation.cfm?id=645309.648954}.}
+
+\bibitem[Teng e Wong 2000]{Teng2000}
+\abntrefinfo{Teng e Wong}{TENG; WONG}{2000}
+{TENG, S.-H.; WONG, C.~W. Unstructured mesh generation: Theory, practice, and
+  perspectives.
+\emph{Int. J. Comput. Geometry Appl.}, v.~10, n.~3, p. 227--266, 2000.}
+
+\bibitem[Thompson, Soni e Weatherhill 1999]{Thompson1999}
+\abntrefinfo{Thompson, Soni e Weatherhill}{THOMPSON; SONI; WEATHERHILL}{1999}
+{THOMPSON, J.~F.; SONI, B.~K.; WEATHERHILL, N.~P. (Ed.). \emph{Handbook of Grid
+  Generation}. New York: CRC Press, 1999. 990~p.
+ISBN 0849326877.}
+
+\bibitem[Toro, Spruce e Speares 1994]{Toro1994}
+\abntrefinfo{Toro, Spruce e Speares}{TORO; SPRUCE; SPEARES}{1994}
+{TORO, E.~F.; SPRUCE, M.; SPEARES, W. Restoration of the contact surface in the
+  {HLL-Riemann} solver.
+\emph{Shock Waves}, Springer-Verlag, v.~4, n.~1, p. 25--34, July 1994.}
+
+\bibitem[{\"U}ng{\"o}r 2004]{Ungor2004}
+\abntrefinfo{{\"U}ng{\"o}r}{{\"U}NG{\"O}R}{2004}
+{{\"U}NG{\"O}R, A. Off-centers: A new type of {S}teiner points for computing
+  size-optimal quality-guaranteed {Delaunay} triangulations. In:
+  FARACH-COLTON, M. (Ed.). \emph{LATIN 2004: Theoretical Informatics}.
+  University of Florida, USA: Springer Berlin Heidelberg, 2004,  (Lecture Notes
+  in Computer Science, v.~2976). p. 152--161.}
+
+\bibitem[{\"U}ng{\"o}r 2009]{Ungor2009}
+\abntrefinfo{{\"U}ng{\"o}r}{{\"U}NG{\"O}R}{2009}
+{\underline{\ \ \ \ \ \ \ \ }. Off-centers: A new type of steiner points for
+  computing size-optimal quality-guaranteed {Delaunay} triangulations.
+\emph{Computational Geometry}, Department of Computer \& Information Science \&
+  Engineering, University of Florida, USA, v.~42, n.~2, p. 109--118, 2009.
+ISSN 0925-7721.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S092577210800059X$>$}{http://www.sciencedirect.com/science/article/pii/S092577210800059X}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Vartziotis, Wipper e Papadrakakis 2013]{Vartziotis2013}
+\abntrefinfo{Vartziotis, Wipper e Papadrakakis}{VARTZIOTIS; WIPPER;
+  PAPADRAKAKIS}{2013}
+{VARTZIOTIS, D.; WIPPER, J.; PAPADRAKAKIS, M. Improving mesh quality and finite
+  element solution accuracy by \{GETMe\} smoothing in solving the poisson
+  equation.
+\emph{Finite Elements in Analysis and Design}, v.~66, n.~0, p. 36 -- 52, 2013.
+ISSN 0168-874X.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.sciencedirect\-.com\-/science\-/article\-/pii\-/S0168874X12002077$>$}{http://www.sciencedirect.com/science/article/pii/S0168874X12002077}.}
+
+\bibitem[Versteeg e Malalasekera 2007]{Versteeg2007}
+\abntrefinfo{Versteeg e Malalasekera}{VERSTEEG; MALALASEKERA}{2007}
+{VERSTEEG, H.; MALALASEKERA, W. \emph{An Introduction to Computational Fluid
+  Dynamics: The Finite Volume Method}. New York: Pearson Education Limited,
+  2007. 503~p.
+ISBN 9780131274983.}
+
+\bibitem[Vollmer, Mencl e Müller 1999]{Vollmer1999}
+\abntrefinfo{Vollmer, Mencl e Müller}{VOLLMER; MENCL; MüLLER}{1999}
+{VOLLMER, J.; MENCL, R.; MüLLER, H. Improved laplacian smoothing of noisy
+  surface meshes.
+\emph{Comput. Graph. Forum}, v.~18, n.~3, p. 131--138, 1999.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dblp\-.uni-trier\-.de\-/db\-/journals\-/cgf\-/cgf18\-.html$>$}{http://dblp.uni-trier.de/db/journals/cgf/cgf18.html}.}
+
+\bibitem[Voronoi 1908]{Voronoi1908}
+\abntrefinfo{Voronoi}{VORONOI}{1908}
+{VORONOI, G. {Nouvelles applications des param\`{e}tres continus \`{a} la
+  th\'{e}orie des formes quadratiques. Deuxi\`{e}me m\'{e}moire. Recherches sur
+  les parall\'{e}llo\`{e}dres primitifs.}
+\emph{Journal f\"{u}r die reine und angewandte Mathematik (Crelles Journal)},
+  De Gruyter, v.~1908, n.~134, p. 198--287, jan. 1908.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1515\-/crll\-.1908\-.134\-.198$>$}{http://dx.doi.org/10.1515/crll.1908.134.198}.}
+
+\bibitem[White 1982]{White1982}
+\abntrefinfo{White}{WHITE}{1982}
+{WHITE, J. B.~A. On the numerical solution of initial/boundary-value problems
+  in one space dimension.
+\emph{SIAM Journal on Numerical Analysis}, Society for Industrial and Applied
+  Mathematics, v.~19, n.~4, p. 683--697, 1982.
+ISSN 00361429.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/www\-.jstor\-.org\-/stable\-/2157026$>$}{http://www.jstor.org/stable/2157026}.}
+
+\bibitem[Zegeling 1996]{Zegeling1996}
+\abntrefinfo{Zegeling}{ZEGELING}{1996}
+{ZEGELING, P.~A. \emph{MFE revisited, Part 1: Adaptive Grid-Generation using
+  the Heat Equation}.
+Department of Mathematics, Utrecht University, 1996. Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/igitur-archive\-.library\-.uu\-.nl\-/math\-/2001-0703-151147\-/946\-.pdf$>$}{http://igitur-archive.library.uu.nl/math/2001-0703-151147/946.pdf}.
+  Acesso em: 12/06/2013.}
+
+\bibitem[Zegeling 2004]{Zegeling2004}
+\abntrefinfo{Zegeling}{ZEGELING}{2004}
+{\underline{\ \ \ \ \ \ \ \ }. Tensor-product adaptive grids based on
+  coordinate transformations.
+\emph{Journal of Computational and Applied Mathematics}, Elsevier Science
+  Publishers B. V., Amsterdam, The Netherlands, v.~166, n.~1, p. 343--360, abr.
+  2004.
+ISSN 0377-0427.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1016\-/j\-.cam\-.2003\-.09\-.018$>$}{http://dx.doi.org/10.1016/j.cam.2003.09.018}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Zegeling 2005]{Zegeling2005}
+\abntrefinfo{Zegeling}{ZEGELING}{2005}
+{\underline{\ \ \ \ \ \ \ \ }. On resistive \uppercase{MHD} models with
+  adaptive moving meshes.
+\emph{Journal of Scientific Computing}, Plenum Press, New York, NY, USA, v.~24,
+  n.~2, p. 263--284, ago. 2005.
+ISSN 0885-7474.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1007\-/s10915-004-4618-6$>$}{http://dx.doi.org/10.1007/s10915-004-4618-6}.
+  Acesso em: 23/04/2013.}
+
+\bibitem[Zhang, Bajaj e Xu 2005]{Zhang2005}
+\abntrefinfo{Zhang, Bajaj e Xu}{ZHANG; BAJAJ; XU}{2005}
+{ZHANG, Y.; BAJAJ, C.; XU, G. Surface smoothing and quality improvement of
+  quadrilateral/hexahedral meshes with geometric flow. In:  HANKS, B. (Ed.).
+  \emph{Proceedings of the 14th International Meshing Roundtable}. Springer
+  Berlin Heidelberg, 2005. p. 449--468.
+ISBN 978-3-540-25137-8.
+Dispon{\'\i}vel em:
+  \htmladdnormallink{$<$http:\-/\-/dx\-.doi\-.org\-/10\-.1007\-/3-540-29090-7\underline{\
+  }27$>$}{http://dx.doi.org/10.1007/3-540-29090-7_27}.}
+
+\bibitem[Zhijun 2005]{Tan2005}
+\abntrefinfo{Zhijun}{ZHIJUN}{2005}
+{ZHIJUN, T.
+\emph{Moving Mesh Finite Volume Method and its Applications}.
+123~p. Tese ({PhD} em Matem\'atica) --- Hong Kong Baptist University, 2005.}
+
+\end{thebibliography}

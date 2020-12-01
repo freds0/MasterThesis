@@ -1,0 +1,197 @@
+\documentclass{ufla}
+\usepackage[portuges]{babel}
+\usepackage[allbordercolors={1 1 1}, bookmarks=true, bookmarksnumbered=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[cmex10]{amsmath}
+\usepackage{ae}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{tabularx}
+% \usepackage[alf,abnt-etal-cite=3,abnt-etal-list=0,abnt-etal-text=emph,bibjustif,abnt-repeated-title-omit=yes,abnt-show-options=warn]{abntex2cite}
+\usepackage[alf,abnt-etal-cite=3,abnt-etal-list=0,abnt-etal-text=default,bibjustif,abnt-repeated-title-omit=yes]{abntex2cite} 
+\usepackage{pslatex}
+\usepackage{amsmath}             % pacote da AMS para Matemática Avançada
+\usepackage{amssymb}             % símbolos extras da AMS
+\usepackage{latexsym}            % símbolos extras do LaTeX
+\usepackage{graphicx}            % para inserção de gráficos
+\usepackage{listings}            % para inserção de código
+\usepackage{fancyvrb}            % para inserção de saídas de comandos
+\usepackage[vlined,linesnumbered,titlenumbered,portuguese]{algorithm2e}
+%\usepackage[algoruled, longend, lined,linesnumbered,portuguese]{algorithm2e}
+\usepackage{babel}
+\usepackage{epsfig}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{wasysym}
+\usepackage{colortbl} % frescuras em tabelas
+\usepackage{babel}
+\usepackage{cancel}
+\usepackage{scalefnt}
+\usepackage{tabularx}
+% \usepackage[bottom=3cm,top=3cm,left=3cm,right=3cm]{geometry}
+% Configuracao do listings
+\lstset{ %
+language=C++,                % choose the language of the code
+basicstyle=\small\ttfamily,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\small,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=1ex,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,           % adds a frame around the code
+tabsize=2,          % sets default tabsize to 2 spaces
+captionpos=t,           % sets the caption-position to bottom
+breaklines=true,        % sets automatic line breaking
+breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+keywordstyle=\color[rgb]{0,0,1},
+commentstyle=\color[rgb]{0.133,0.545,0.133},
+stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+\newcommand{\defs}[1]{\textsl{#1}}
+
+\author{Frederico Santos de Oliveira}
+\title{Uma avaliação de movimento de malhas baseado na formulação laplaciana na resolução da equação do calor por discretizações de volumes finitos com refinamento de Delaunay}
+%\folhaaprovacao{Img/folha-de-aprovacao.pdf}
+\date{2014}
+\tipo{Dissertação apresentada à Universidade Federal de Lavras, como parte das exigências do Programa de Pós-Graduação em Ciência da Computação, área de concentração em Inteligência Computacional e Processamento Gráfico, para a obtenção do título de Mestre.}
+\areaconcentracao{Inteligência Computacional e Processamento Gráfico}
+
+\orientador{Prof. D.Sc. Sanderson L. Gonzaga de Oliveira}
+% \coorientador{Dr. Raphael Winckler de Bettio}
+% \coorientadorbanca{Dr. Raphael W. de Bettio}
+% \coorientadorbancainst{UFLA}
+\bancaum{D.Sc. Daniel Furtado Ferreira}
+\bancauminst{UFLA}
+\bancadois{Ph.D. João Manuel R. S. Tavares}
+\bancadoisinst{FEUP}
+\defesa{}
+\palchaves{Geração de Malhas; Refinamento Adaptativo; Malhas Móveis}
+\keywords{Meshes Generation; Adaptive Refinement; Moving Meshes}
+
+
+% Dados para ficha catalográfica
+\fcautor{Oliveira, Frederico Santos de.}
+\fcorientador{Sanderson L. Gonzaga de Oliveira}
+% Tipo de material para ficha catalográfica
+\fctipo{Dissertação (mestrado) -- Universidade Federal de Lavras, 2014.}
+% dados para ficha catalográfica 
+\fccatalogacao{1. À preencher. 2. À preencher. 3. À preencher. 4. À preencher. I. Universidade Federal de Lavras. II. Título.}
+% classificação de acordo com a CDD
+\fccdd{CDD -- 000.0}
+
+
+\hyphenation{Ciência Computação Colegiado Curso Bacharel Universidade Federal Lavras Graduação Inteligência Computacional Processamento Gráfico}
+
+% Aumente este numero para aumentar o espacamento no sumário
+% entre os numeros das secoes e os titulos. Este é um fator
+% multiplicativo, 1.5 significa uma vez e meia o espaco padrao.
+\scalenumwidth{1}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+% \dedic{
+% Dedico esta dissertação à ...
+% }
+% 
+% \thanks{
+% Agradeço a...
+% }
+
+\resumo{
+Neste trabalho, realiza-se a aplicação de um esquema, combinando o refinamento de delaunay e malhas móveis por volumes finitos na solução da equação do calor. Utiliza-se o algoritmo de \citeonline{Green1978} para geração da malha inicial, o algoritmo de \citeonline{Ruppert1995} para realizar o refinamento adaptativo e o algoritmo de \citeonline{Ungor2004, Ungor2009} para realizar melhorias na qualidade da malha. Movimenta-se os vértices para regiões de grande variação por meio de uma nova função monitora proposta, baseada na suavização laplaciana, que é responsável por guiar o movimento dos vértices. Compara-se a função monitora proposta com outras quatro funções monitoras, também baseadas na suavização laplaciana, presentes na literatura. Os resultados comparativos mostram que a nova função monitora proposta, mesmo não demandando o menor esforço computacional em relação às demais, apresenta a menor quantidade final de vértices. Todos os procedimentos para realização dos experimentos são detalhados ao longo deste trabalho.
+}
+
+\resumoingles{
+In this paper we apply a scheme, combining the refinement and delaunay meshing in finite volume solution of the heat equation. We use the algorithm \citeonline{Green1978} to generate the initial mesh, the algorithm \citeonline{Ruppert1995} to perform adaptive refinement algorithm and \citeonline{Ungor2004, Ungor2009} to make improvements on mesh quality. We move the vertices to great variability regions using a new proposed monitoring function based on the Laplacian smoothing, which is responsible for guiding the movement of the vertices. We compare the new proposed monitoring function with four other monitor functions, also based on the Laplacian smoothing that we find in the literature. The comparative results show that the new proposed monitoring function, while not requiring the least computational effort compared to the others, has the lowest amount of end vertices. All procedures for the experiments are detailed throughout this work.
+}
+
+\listoffigures
+\listoftables
+\listofacronyms{
+	\item[AMR] {\it Adaptive mesh refinement}
+        \item[CER] {\it Circunradius-to-shortest edge radio}
+        \item[CMr] Cuthill-McKee reverso 
+	\item[EDP] Equação diferencial parcial
+	\item[FEUP] Faculdade de Engenharia Universidade do Porto
+	\item[GMP] {\it GNU Multiple-Precision Library}
+	\item[KHI] Instabilidade de Kelvin-Helmholtz 
+	\item[MGC] Método dos gradientes conjugados
+	\item[MHD] Magneto-hidrodinâmicos 
+	\item[MPFR] {\it Multiple-Precision Floating-point computations with correct Rounding}
+	\item[MVF] Método dos volumes finitos		
+	\item[PE] Princípio de equidistribuição
+	\item[PSLG] {\it Planar Straight Line Graph} 
+	\item[SPH] {\it Smoothed particle hydrodynamics}
+	\item[SRQ] {\it Shape Regularity Quality}
+	\item[UFLA] Universidade Federal de Lavras
+	\item[VC]  Volume de controle
+	\item[VPH] Partículas de Voronoi hidrodinâmicas	
+}
+\tableofcontents
+
+\pagestyle{ufla}
+
+% As secoes podem estar separadas em arquivos .tex
+\include{intro}
+\include{referencial_teorico}
+\include{desenvolvimento}
+\include{resultados}
+\include{conclusao}
+
+\vfill\null\newpage
+\renewcommand{\baselinestretch}{1.0}
+\bibliographystyle{abntex2-alf}
+ \bibliografia{referencias}
+
+% \renewcommand{\baselinestretch}{1.0}\normalsize
+% \def\hyphenpenalty{10000}
+% \def\exhyphenpenalty{10000}
+% \refstitle{REFERÊNCIAS}
+% \providecommand{\abntreprintinfo}[1]{%
+%  \citeonline{#1}}
+% \setlength{\labelsep}{0pt}\begin{thebibliography}{}
+% \providecommand{\abntrefinfo}[3]{}
+% \providecommand{\abntbstabout}[1]{}
+% \abntbstabout{v-1.9 }
+% \normalsize\normalfont
+% \setlength{\itemsep}{16pt}
+% 
+% 
+% 
+% 
+% 
+% 
+% \end{thebibliography}
+
+% Apendices e anexos
+% \newpage
+% \apendices
+% %\input{sections/apend-middleware}
+% \apendice{Primeiro Apêndice}
+% Texto.
+
+% \newpage
+% \apendice{Segundo Apêndice}
+% Texto.
+
+% \newpage
+% \anexos
+% %\input{sections/apend-middleware}
+% \anexo{Primeiro Anexo}
+% Texto.
+
+% \newpage
+% \anexo{Segundo Anexo}
+% Texto.
+
+\end{document}

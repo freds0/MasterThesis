@@ -1,0 +1,7 @@
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.035573e+00 y: 9.326028e+00
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.571332e-02 y: 2.913693e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 1.396145e+01 y: 1.358664e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -5.471000e-02 y: 2.914814e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 2.500254e+01 y: 3.917434e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 1.220703e-01 y: 4.990889e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.999244e+01 y: 1.525879e-02

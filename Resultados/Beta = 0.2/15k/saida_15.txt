@@ -1,0 +1,162 @@
+                               VARIABLE                                    VALUE
+            CONFIG_PRINT_INFO_MESSAGES:                                        0
+                     CONFIG_TIME_LIMIT:                                       10
+                   CONFIG_MIN_VERTICES:                                    15000
+                 CONFIG_TIME_VARIATION:                                      0.1
+          CONFIG_MONITOR_FUNCTION_BETA:                                      0.2
+            CONFIG_MONITOR_FUNCTION_MU:                                   0.2001
+                CONFIG_MOVING_MESH_ETA:                                      0.6
+       CONFIG_MESH_MINIMUM_ANGLE_ALPHA:                                       30
+   CONFIG_PERC_INCREASE_GRADIENT_THETA:                                    1e-10
+           CONFIG_CG_PRESICION_EPSILON:                                    1e-10
+                  CONFIG_EXEC_THREAD_A:                                        1
+                  CONFIG_EXEC_THREAD_B:                                        1
+                  CONFIG_EXEC_THREAD_C:                                        1
+                  CONFIG_EXEC_THREAD_D:                                        1
+                  CONFIG_EXEC_THREAD_E:                                        1
+      CONFIG_MONITOR_FUNCTION_THREAD_A:                                        0
+      CONFIG_MONITOR_FUNCTION_THREAD_B:                                        1
+      CONFIG_MONITOR_FUNCTION_THREAD_C:                                        2
+      CONFIG_MONITOR_FUNCTION_THREAD_D:                                        3
+      CONFIG_MONITOR_FUNCTION_THREAD_E:                                        4
+               CONFIG_OUTPUT_MAIN_FILE:                             saida_15.txt
+           CONFIG_OUTPUT_FILE_THREAD_A:                    saida_thread_A_15.txt
+           CONFIG_OUTPUT_FILE_THREAD_B:                    saida_thread_B_15.txt
+           CONFIG_OUTPUT_FILE_THREAD_C:                    saida_thread_C_15.txt
+           CONFIG_OUTPUT_FILE_THREAD_D:                    saida_thread_D_15.txt
+           CONFIG_OUTPUT_FILE_THREAD_E:                    saida_thread_E_15.txt
+            CONFIG_OUTPUT_DIR_THREAD_A:                              Thread_A_15
+            CONFIG_OUTPUT_DIR_THREAD_B:                              Thread_B_15
+            CONFIG_OUTPUT_DIR_THREAD_C:                              Thread_C_15
+            CONFIG_OUTPUT_DIR_THREAD_D:                              Thread_D_15
+            CONFIG_OUTPUT_DIR_THREAD_E:                              Thread_E_15
+             CONFIG_PRINT_VERTEX_VALUE:                                        0
+           CONFIG_PRINT_TRIANGLE_VALUE:                                        0
+          CONFIG_PRINT_ADJACENCY_VALUE:                                        0
+            CONFIG_PRINT_CLOCKS_VALUES:                                        1
+          CONFIG_PRINT_VERTEX_MOVIMENT:                                        0
+               CONFIG_PRINT_MATRIX_A_B:                                        0
+                   CONFIG_DISPLAY_MESH:                                        0
+                  CONFIG_SHOW_TRIANGLE:                                        1
+                    CONFIG_SHOW_CIRCLE:                                        0
+           CONFIG_SHOW_VORONOI_DIAGRAM:                                        0
+              CONFIG_SHOW_VERTEX_LABEL:                                        1
+         CONFIG_EXEC_CUTHILL_MCKEE_ALG:                                        1
+          CONFIG_CUTHILL_MCKEE_REVERSE:                                        1
+       CONFIG_OUTPUT_FILE_QUALITY_MESH:                           Quality_15.csv
+      CONFIG_OUTPUT_FILE_GRADIENT_MESH:                         Gradients_15.csv
+       CONFIG_OUTPUT_FILE_VERTEX_VALUE:                       VerticesValues.csv
+     CONFIG_OUTPUT_FILE_TRIANGLE_VALUE:                      TrianglesValues.csv
+    CONFIG_OUTPUT_FILE_VERTEX_MOVIMENT:                     VerticesMoviment.csv
+           CONFIG_OUTPUT_FILE_MATRIX_A:                              MatrixA.txt
+           CONFIG_OUTPUT_FILE_MATRIX_B:                              MatrixB.txt
+          CONFIG_OUTPUT_FILE_CLOCK_CMR:                        Clocks_cmr_15.csv
+           CONFIG_OUTPUT_FILE_CLOCK_FV:                         Clocks_fv_15.csv
+           CONFIG_OUTPUT_FILE_CLOCK_CG:                         Clocks_cg_15.csv
+           CONFIG_OUTPUT_FILE_CLOCK_MM:                         Clocks_mm_15.csv
+  CONFIG_BNDR_CONDITION_BOTTOM_CORNERS:                                       10
+     CONFIG_BNDR_CONDITION_TOP_CORNERS:                                        0
+             CONFIG_BNDR_CONDITION_TOP:                                        0
+          CONFIG_BNDR_CONDITION_BOTTOM:                                       10
+           CONFIG_BNDR_CONDITION_SIDES:                                       10
+CONFIG_BNDR_CONDITION_IN_INITIAL_VALUE:                                        0
+#################################################################################
+#### INICIO REFINAMENTO MALHA ###########
+
+
+ETAPA REFINAMENTO: 1
+Executando algoritmo de Ruppert: Criterio distancia.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 18
+Total vertices: 49
+
+ETAPA REFINAMENTO: 2
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 40
+Total vertices: 110
+
+ETAPA REFINAMENTO: 3
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 66
+Total vertices: 241
+
+ETAPA REFINAMENTO: 4
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 104
+Total vertices: 503
+
+ETAPA REFINAMENTO: 5
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 166
+Total vertices: 1002
+
+ETAPA REFINAMENTO: 6
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 229
+Total vertices: 1933
+
+ETAPA REFINAMENTO: 7
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 360
+Total vertices: 3841
+
+ETAPA REFINAMENTO: 8
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 500
+Total vertices: 7756
+
+ETAPA REFINAMENTO: 9
+Executando algoritmo de Ruppert:  Criterio gradiente.
+Executando algoritmo de Ungor: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 699
+Total vertices: 15788
+
+#### CLONANDO MALHA ####
+
+Thread A OK
+Thread B OK
+Thread C OK
+Thread D OK
+Thread E OK
+
+#### EXECUTANDO THREADS ####
+
+Thread: 0 OK
+Thread: 1 OK
+Thread: 2 OK
+Thread: 3 OK
+Thread: 4 OK

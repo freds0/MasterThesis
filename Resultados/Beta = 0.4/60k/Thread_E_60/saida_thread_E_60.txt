@@ -1,0 +1,404 @@
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 1/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 1385
+Total vertices: 67963
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 1/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 976
+Total iteracoes: 1384
+Total vertices: 68942
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 2/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 1184
+Total vertices: 68942
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 2/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 1023
+Total vertices: 68942
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 2/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 261
+Total iteracoes: 1036
+Total vertices: 69203
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 3/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 966
+Total vertices: 69203
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 3/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 875
+Total vertices: 69203
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 3/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 186
+Total iteracoes: 846
+Total vertices: 69389
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 4/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 890
+Total vertices: 69389
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 4/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 759
+Total vertices: 69389
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 4/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 238
+Total iteracoes: 765
+Total vertices: 69627
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 5/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 825
+Total vertices: 69627
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 5/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 680
+Total vertices: 69627
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 5/10 - 1
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 678
+Total vertices: 69627
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 5/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 362
+Total iteracoes: 694
+Total vertices: 69989
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 6/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 771
+Total vertices: 69989
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 6/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 630
+Total vertices: 69989
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 6/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 103
+Total iteracoes: 626
+Total vertices: 70092
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 7/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 735
+Total vertices: 70092
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 7/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 595
+Total vertices: 70092
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 7/10 - 1
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 595
+Total vertices: 70092
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 7/10 - 2
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 588
+Total vertices: 70092
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 7/10 - 3
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 580
+Total vertices: 70092
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 7/10 - 4
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 576
+Total vertices: 70092
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 7/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 441
+Total iteracoes: 605
+Total vertices: 70534
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 8/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 709
+Total vertices: 70534
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 8/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 545
+Total vertices: 70534
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 8/10 - 1
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 530
+Total vertices: 70534
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 8/10 - 2
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 537
+Total vertices: 70534
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 8/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 286
+Total iteracoes: 570
+Total vertices: 70820
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 9/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 682
+Total vertices: 70820
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 9/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 498
+Total vertices: 70820
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 9/10 - 1
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 496
+Total vertices: 70820
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 9/10 - 2
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 498
+Total vertices: 70820
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 9/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 211
+Total iteracoes: 519
+Total vertices: 71031
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 10/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 650
+Total vertices: 71031
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 10/10 - 0
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 461
+Total vertices: 71031
+
+########### THREAD 4 ###########
+Movimentando malha (Funcao Psi). Etapa: 10/10 - 1
+Movimento OK
+Verificando Malha.
+Malha OK.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 462
+Total vertices: 71031
+
+########### THREAD 4 ###########
+FIM DA ETAPA: 10/10
+EXECUTANDO ALGORITMO DE UNGOR: Off-centers.
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total refinados: 94
+Total iteracoes: 474
+Total vertices: 71125
+
+########### THREAD 4 ###########
+AVANCANDO PARA ETAPA TEMPORAL : 11/10
+Executando MVF.
+Executando CMr.
+Executando MGC.
+Total iteracoes: 631
+Total vertices: 71125
+
+########### THREAD 4 ###########
+Malha OK.
+Total CLOCKS: 117407020000

@@ -1,0 +1,243 @@
+\subsection{O método dos gradientes conjugados}
+\label{cap_metodo_gradientes_conjugados}
+
+Nesta seção, apresenta-se o método dos gradientes conjugados (MGC). Em seguida, definem-se os passos do MGC e elabora-se um pseudocódigo. Com o intuito de diminuir o número de iterações, explica-se como realizar o pré-condicionamento e o reordenamento dos vértices.  
+
+\subsubsection{Considerações iniciais}
+
+Um sistema linear, na forma de um produto matricial, pode ser visto como 
+
+\begin{equation}
+Ax = b,
+\label{equacao_ax=b}
+\end{equation}
+
+\noindent de forma que ${A \in \mathbb{R}^{n \times n}}$ e os vetores $x , b \in \mathbb{R}^{n}$ são tomados como vetores coluna. A solução do sistema poderia ser calculada por meio da inversa da matriz $A$, considerando que $A$ seja inversível, na forma $x = A^{-1}b$. Porém, o cálculo da inversa apresenta imprecisão numérica, além de ser um algoritmo com complexidade $O(n^3)$. Ver \citeonline{Niedu2012}, para detalhes.
+
+O MGC foi, inicialmente, proposto por \citeonline {Hestenes1952}. Foi, originalmente, desenvolvido como um método direto delineado para resolver um sistema linear $n \times n$ positivo definido  \cite [p.~479]{Burden2010}.
+
+O MGC é útil na resolução de sistemas esparsos, de tamanho elevado, com $n$ na casa de milhares ou milhões, com entradas não nulas que aparecem em padrões predizíveis. Quando a matriz está pré-condicionada, de forma que os cálculos sejam eficazes, bons resultados são obtidos em, aproximadamente, $\sqrt{n}$ passos, tornando o MGC preferível em relação à eliminação gaussiana e a outros métodos iterativos  \cite[p.~479]{Burden2010}.
+
+Na seção (\ref{cap_otimizacao}), mostra-se que, por meio da minimização de uma função, encontra-se a solução do sistema linear. Na seção (\ref{cap_construcao}), define-se o MGC e um algoritmo em pseudocódigo. Na seção (\ref{cap_pre_condicionamento}), mostra-se como realizar um pré-condicionamento.
+Por fim, na seção (\ref{cap_conclusao}), tem-se o resumo deste capítulo.
+
+\subsubsection{Otimização para resolução de sistemas lineares} \label{cap_otimizacao}
+
+A solução de um sistema linear, conforme a equação (\ref{equacao_ax=b}), pode ser encontrada por meio da minimização de uma função $f(x) : \mathbb{R} \rightarrow \mathbb{R}$, sujeita a $x \in \mathbb{R}^n$. A demonstração de que a solução do sistema linear é encontrada a partir da minimização de $f(x)$ pode ser encontrada em \citeonline[p.~479]{Burden2010}. 
+
+O vetor $x^*$ é uma solução do sistema linear definido positivo se e, somente se, $x^*$ minimiza
+
+\begin{equation}
+f(x)=\frac{x^TAx}{2} -b^Tx.
+\label{equacao_f(x)}
+\end{equation}
+
+Ao derivar a equação (\ref{equacao_f(x)}) em relação ao vetor $x$, o resultado é um vetor também pertencente a $\mathbb{R}^n$, que satisfaz $\nabla {f(x^*)={Ax^*} -b = 0}$. O gráfico dessas funções apresenta um comportamento característico, de forma que o centro das curvas de nível é justamente o minimizador de $f(x)$.
+
+\subsubsection{Definição do método} \label{cap_construcao}
+
+O MGC consiste em, a partir de uma estimativa de solução inicial, minimizar o resíduo $r$, tal que $r = b - Ax$, a cada iteração $k$, em que $0 \leq k \leq n-1$, ao longo de direções conjugadas.  
+Calcula-se a solução a partir de uma direção de busca $d_k$ e um coeficiente $\vartheta_k$, denominado comprimento do passo, conforme
+
+\begin{equation} 
+x_{k+1} = x_k + \vartheta_{k+1} d_{k+1}.
+\label{equacao_xk}
+\end{equation}
+
+A direção de busca é definida de forma que
+
+\begin{equation}
+ d_k = r_{k-1} + \varphi_{k-1} d_{k-1} \\
+\label{equacao_d_k}
+\end{equation}
+
+\noindent e o valor do resíduo $r_k$ é dado por
+
+\begin{equation}
+r_{k+1} = r_{k} - \vartheta_{k+1} A d_{k+1}.
+\label{equacao_r_k}
+\end{equation}
+
+Os coeficientes $\vartheta_k$ e $\varphi_{k}$ são calculados conforme
+
+\begin{equation}
+  \vartheta_k =  \frac {r_{k-1}^T r_{k-1}} {d^{T}_k A d_k}
+\label{equacao_alpha_4}
+\end{equation}
+e
+\begin{eqnarray}
+ \varphi_{k} = \frac{r_{k}^T r_{k}} {r_{k-1}^T r_{k-1}}.
+\label{equacao_beta_k}
+\end{eqnarray}
+
+Dessa forma, o resíduo é minimizado ao longo das direções de busca. A estimativa inicial pode ser $x_0 = 0$, $r_0 = b$ e $d_1 = r_0$. O processo iterativo do MGC, formado pelas equações (\ref{equacao_xk}), (\ref{equacao_r_k}), (\ref{equacao_d_k}), (\ref{equacao_alpha_4}) e (\ref{equacao_beta_k}), pode ser descrito conforme apresentado no algoritmo (\ref{algoritmo_gradiente_conjugado}).
+
+\begin{algorithm}
+\caption{Método dos gradientes conjugados.}
+\label{algoritmo_gradiente_conjugado}
+\Entrada{Matrizes $A$ e $b$.}
+\Saida{Solução $x$.}
+$n \leftarrow \textrm {dimensão do vetor } x;$\\
+\CommentSty{// Definir o erro admitido, por exemplo, $10^{-3}$.}\\
+$\varepsilon \leftarrow 10^{-3};$ \\
+\CommentSty{// O $erro$ deve ser maior que $\varepsilon$ na primeira iteração}\\
+$erro \leftarrow \varepsilon + 1;$ \\
+ \tcp{Valores para $i = 0$. $\vartheta_0$ e $\varphi_0$ não são necessários.}
+$x_0 \leftarrow 0$\; 
+$r_0 \leftarrow b - Ax_0$\;
+$d_1 \leftarrow r_0$\;       
+\tcp{Há $n+1$ termos ($0\leq i \leq n$)}
+$i \leftarrow 1$\;
+\Enqto{ $((i \leq n)$ e $(erro > \varepsilon))$} { 
+ $ \vartheta_{i} \leftarrow \frac{r^T_{i-1} r_{i-1}}{d^T_{i} A d_{i}};$ \CommentSty{ // equação (\ref{equacao_alpha_4})} \\
+ $ x_{i} \leftarrow x_{i-1} + \vartheta_{i} d_{i};$ \CommentSty{// equação (\ref{equacao_xk})}\\
+ $erro \leftarrow \frac { || x_i - x_{i-1} ||_\infty } { ||x_i||_\infty};$ \CommentSty{ // $||x_i||_\infty$ é a norma infinita de $x_i$ } \\
+ \tcp{Verifica se a próxima iteração será executada}
+ \Se{$((i+1 \leq n)$ e $(erro > \varepsilon))$ }{
+    $ r_{i} \leftarrow r_{i-1} - \vartheta_{i} A d_{i};$ \CommentSty{// equação (\ref{equacao_r_k})}\\ 
+    $ \varphi_{i} \leftarrow \frac{r^T_{i} r_ {i}} {r^T_{i-1} r_{i-1}};$ \CommentSty{ // equação (\ref{equacao_beta_k})}\\
+    $ d_{i+1} \leftarrow r_{i} + \varphi_{i} d_{i};$ \CommentSty{// equação (\ref{equacao_d_k})}\\
+  }
+ $i \leftarrow i + 1$\;
+}
+\end{algorithm}
+
+\subsubsection{Pré-condicionamento} \label{cap_pre_condicionamento}
+
+Segundo \citeonline[p.~486]{Burden2010}, ao utilizar um pré-condicionamento, o MGC não é aplicado diretamente na matriz A, mas sim em uma outra matriz positiva-definida. O pré-condicionamento consiste na substituição da equação (\ref{equacao_ax=b}) pelo sistema equivalente $C^{-1} Ax = C^{-1} b$, de forma que $C^{-1}$ seja escolhido com o objetivo de se melhorar o condicionamento do sistema original. Considerando-se $\tilde{A} = C^{-1} A (C^{-1})^T$, $\tilde{x} = C^{T} x$ e $\tilde{b} = C^{-1} b$, obtém-se a equação $\tilde{A} \tilde{x} = \tilde{b}$.
+
+Dado que $ \tilde{r}_k = C^{-1}r_k$, $w_k = C^{-1} r_k$ e $\tilde{d}_k = C^{T}d_k$, as equações que geram o MGC podem ser reescritas, incorporando-se o pré-condicionamento. A equação (\ref{equacao_xk}), com o pré-condicionamento, fica
+
+\begin{equation}
+\tilde{x}_{k} = x_{k-1} +   \tilde{\vartheta} d_{k},
+\label{equacao_xk_tilde}
+\end{equation}
+
+\noindent em que o parâmetro $\vartheta_k$, conforme a equação (\ref{equacao_alpha_4}), fica
+\begin{equation}
+\tilde{\vartheta}_{k} = \frac {w^{T}_{k-1} w_{k-1}} { d^{T}_{k} A d_{k}}.  
+\label{equacao_alpha_til}
+\end{equation}
+
+A equação (\ref{equacao_r_k}) fica
+
+\begin{eqnarray}
+\tilde{r}_{k} = r_{k-1} - \tilde{\vartheta}_{k} A d_{k}.
+\label{equacao_r_k_tilde}
+\end{eqnarray}
+
+A equação (\ref{equacao_d_k}) fica
+
+\begin{eqnarray}
+\tilde{d}_{k+1} = C^{-T} w_{k} + \tilde{\varphi}_{k} d_{k}.
+\label{equacao_d_k_tilde}
+\end{eqnarray} 
+
+O parâmetro $\varphi_k$, conforme a equação (\ref{equacao_beta_k}), fica
+
+\begin{equation}
+\tilde{\varphi}_{k} = \frac{w^T_{k} w_{k}} {w^T_{k-1} w_{k-1}}. 
+\label{equacao_beta_k_tilde}
+\end{equation}
+
+Com as equações (\ref{equacao_xk_tilde}), (\ref{equacao_alpha_til}), (\ref{equacao_r_k_tilde}), (\ref{equacao_d_k_tilde}) e (\ref{equacao_beta_k_tilde}), tem-se o MGC pré-condicionado.
+
+\subsubsection{Cuthill-McKee reverso} 
+\label{cap_cuthill_mckee_reverso}
+Para se reduzir o custo de execução e armazenamento para se solucionar um problema pelo MGC é realizada a reordenação da matriz de coeficientes. Um algoritmo muito utilizado, por apresentar bons resultados, é o algoritmo de \citeonline{Cuthill1969}. \citeonline{George1971} verificou que a ordem inversa do reordenamento realizado pelo algoritmo de \citeonline{Cuthill1969} supera o original.
+
+O algoritmo Cuthill-McKee reverso é um método de reordenação, que objetiva reduzir a largura de banda de uma matriz simétrica. A largura de banda de uma matriz é a maior distância do primeiro elemento não-nulo da matriz triangular inferior à diagonal principal. Segundo \citeonline{George1994}, dado que a largura de banda da $i$-ésima linha de uma matriz $A$, de dimensão $n$, é $\psi_i(A) = i - min\{ (1 \leq j \leq n) | a_{ij} \in A, a_{ij} \neq 0 \}$, a largura de banda $\psi$ da matriz $A$, é dada por 
+\begin{eqnarray}
+\psi(A) &=& \max \{\psi_i(A) |  1 \leq i \leq n \} \nonumber \\
+        &=& \max \{ |i - j|, | a_{i,j} \in A, a_{i,j} \neq 0 \}. \nonumber
+\end{eqnarray}
+Esse algoritmo realiza o reordenamento dos vértices de modo que, na matriz gerada, os elementos não nulos irão localizar-se mais próximos da diagonal. Esse algoritmo não garante que será encontrada a menor largura de banda possível, no entanto, na prática, bons resultados são obtidos. 
+
+Considera-se o {\it profile} $\zeta$, da matriz $A$, tal que $\zeta(A) = \sum_ {i=1}^{n} \psi_i(A)$, em que $n$ é o número de linhas da matriz $A$. \citeonline{George1971} verificou que o algoritmo Cuthill-McKee reverso apresenta resultados melhores em relação ao original, havendo, frequentemente, uma redução do {\it profile}, mas mantendo a largura de banda da matriz. 
+
+No algoritmo (\ref{algoritmo_cuthill_mckee}), tem-se o pseudocódigo do algoritmo Cuthill-McKee reverso, baseado na busca em largura. Esse algoritmo difere-se do algoritmo de busca em largura convencional em relação à ordem de visitação dos vértices, que se dá em ordem crescente de grau dos vértices. A saída do algoritmo é a lista dos vértices ordenados.
+
+\begin{algorithm}
+\caption{Cuthill Mckee reverso}
+\label{algoritmo_cuthill_mckee}
+\Entrada{ Vértice raiz $r$}
+\Saida{Lista $L$ de vértices ordenados}
+\Inicio{
+  $i \leftarrow 1;$ \\
+  \CommentSty{// Insere v\'ertice raiz $r$ no final da fila.}  \\   
+  $Fila \leftarrow r;$ \\
+  \CommentSty{// Marca v\'ertice raiz $r$ como visitado.}  \\   
+  $Visitou(r) \leftarrow Verdadeiro;$ \\
+  \Enqto{ ($Vazia(Fila) = Falso $) } 
+  {
+    \CommentSty{// Remove o primeiro v\'ertice da fila.}  \\   
+    $v \leftarrow Fila;$ \\
+    \CommentSty{// Insere o v\'ertice $v$ na posi\c{c}\~ao $i$ da lista de\\ // v\'ertices ordenados.}  \\   
+    $L(i) \leftarrow v;$ \\      
+    $i \leftarrow i + 1;$ \\
+    \CommentSty{// Ordena v\'ertices adjacentes \`a $v$ em ordem\\ // crescente de grau.}  \\   
+    $OrdenaAdjacentes(v);$ \\
+    \ParaCada{(vértice $w$ adjacente \`a $v$ em ordem crescente de grau)} 
+    {
+      \Se{ ($Visitou(w) = Falso$)} 
+      {
+	  \CommentSty{// Insere v\'ertice $w$ no final da fila.}  \\   
+	  $Fila \leftarrow w$; \\
+	  \CommentSty{// Insere o v\'ertice $w$ na posi\c{c}\~ao $i$ da\\ // lista de v\'ertices ordenados.}  \\   
+	  $L(i) \leftarrow w;$ \\      
+	  $i \leftarrow i + 1;$ \\	  
+	  \CommentSty{// Marca v\'ertice $w$ como visitado.}  \\   
+	  $Visitou(w) \leftarrow Verdadeiro;$ \\
+      }
+    }      
+  }
+  \CommentSty{// Inverte a ordem dos v\'ertices na lista $L$.} \\
+  $InverterOrdem(L)$; \\
+  \Retorna $L$; \\
+}
+\end{algorithm}  
+
+\citeonline{Cuthill1969} verificaram que a qualidade da ordenação de seu algoritmo depende do vértice inicial. Uma opção proposta para vértice inicial é o vértice de grau mínimo, que apresenta bons resultados, embora sem garantias. Uma outra proposta é apresentada a seguir.
+
+{\bf Vértice pseudoperiférico}
+
+Um estudo, elaborado por \citeonline{George1979}, propõe utilizar um vértice inicial a partir de um par de vértices que se encontra o mais distante possível entre si. Alguns conceitos são importantes para entender o funcionamento desse algoritmo.
+
+Considere um grafo $G = (L_V, L_E)$, em que $L_V$ é um conjunto de vértices e $L_E$ o conjunto de arestas do grafo $G$. A excentricidade de um vértice $v \in L_V$, é dada pela maior distância $d(v,u)$ entre $v$ e um vértice $u \in L_V$, tal que $u \neq v$, dado que a distância entre dois vértices é o tamanho do menor caminho entre eles. Um caminho é um conjunto ordenado de vértices distintos $(v_0,v_1,..., v_k)$, tal que $v_i$ é adjacente a $v_{i+1}$, ou seja $v_i \in adj(v_{i+1})$ para $i=0,1,...k-1$. Portanto, a excentricidade $\tau$ de $v \in L_V$ é dada pela maior distância, de forma que $\tau(v) = \max \{ (\forall u \in L_V \wedge u \neq v) d(v,u) \}$. O diâmetro $\kappa$ de $G$ é a maior excentricidade encontrada em $G$, ou seja, $\kappa(G) = \max \{ (\forall v \in L_V) \tau (v) \} = \max \{ (\forall v,u \in L_V) d(v,u) \}$. Um vértice periférico $v \in L_V$ é aquele cuja excentricidade é igual ao diâmetro do grafo, de forma que $\tau(v) = \kappa(G)$. Já um vértice pseudoperiférico possui sua excentricidade próxima ao diâmetro do grafo.
+
+Uma  estrutura de nível de um dado nó $v \in L_V$ é o particionamento $\mathscr{L}(v)$ de $L_V$, satisfazendo $\mathscr{L}(v) = \{ L_{0}(v), L_{1}(v), ... L_{\tau(v)} (v) \}$ em que $L_{0} (v) = \{ v \}, L_{1} (v) = adj (L_{0} (v) )$ e $L_{i} (v) = adj( L_{i-1} (v) ) - L_{i-2} (v), i = 2, 3, ... \tau(v) $. Dessa forma, os vértices com excentricidade $\tau$ de $v$ se encontram no conjunto $L_{\tau(v)}(v)$. 
+
+Com esses conceitos apresentados, é possível entender o funcionamento do algoritmo (\ref{algoritmo_pseudo_periferico}), que apresenta um pseudocódigo referente ao algoritmo de \citeonline{George1979}.
+
+\begin{algorithm}
+\caption{Encontrar v\'ertice pseudoperif\'erico}
+\label{algoritmo_pseudo_periferico}
+\Entrada{ Vértice raiz $v$}
+\Saida{ V\'ertice pseudoperif\'erico $t$}
+\Inicio{
+  \CommentSty{// Construir a estrutura de n\'ivel de $v$.}  \\   
+  $\mathscr{L}(v) = \{  L_{0}(v), L_{1}(v), ..., L_{\tau(v)} (v) \};$ \\
+  \Repita{ ( $u = v$ ) } 
+  {
+    \CommentSty{// $u$ \'e utilizado como controle do la\c{c}o de \\ // repeti\c{c}\~ao.}  \\   
+    $u \leftarrow v;$ \\
+    \CommentSty{// Busca entre os v\'ertices de maior\\ // excentricidade aquele com grau m\'inimo.}  \\   
+    $t \leftarrow$ V\'ertice com grau m\'inimo $\in L_{\tau(v)} (v);$ \\  
+    \CommentSty{// Construir a estrutura de n\'ivel de $t$.}  \\   
+    $\mathscr{L}(t) = \{  L_{0}(t), L_{1}(t), ..., L_{\tau(t)} (t) \};$ \\    
+    \CommentSty{// Verifica qual tem maior excentricidade.}  \\   
+    \Se{($\tau(t) > \tau(v)$)} 
+    {   
+	$v \leftarrow t;$ \\
+    }    
+  }
+  $t \leftarrow v;$ \\
+  \Retorna $t$;
+}
+\end{algorithm}  
+
+\subsubsection{Resumo} \label{cap_conclusao}
+
+Nesta seção, apresentou-se a defininção do MGC bem como as suas principais características. Também foi descrito um pseudocódigo, que pode ser observado no algoritmo (\ref{algoritmo_gradiente_conjugado}), página \pageref{algoritmo_gradiente_conjugado}, a fim de resolver um sistema linear do tipo $Ax = b$. 
+
+Com o intuito de se otimizar o número de iterações, na subseção (\ref{cap_pre_condicionamento}), foi apresentado como realizar o pré-condicionamento da matriz de coeficientes. Também foi exposto, na subseção (\ref{cap_cuthill_mckee_reverso}), um algoritmo de reordenação da matriz de coeficientes, o algoritmo Cuthill-McKee reverso, conforme o algoritmo (\ref{algoritmo_cuthill_mckee}), na página \pageref{algoritmo_cuthill_mckee}. Ainda, a fim de melhorar o desempenho do algoritmo de reordenação, apresentou-se um algoritmo que busca um vértice pseudoperiférico, utilizado como vértice inicial no algoritmo de reordenação, que pode ser observado no algoritmo (\ref{algoritmo_pseudo_periferico}), página \pageref{algoritmo_pseudo_periferico}.

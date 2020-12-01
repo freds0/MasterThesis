@@ -1,0 +1,26 @@
+\section{CONCLUSÃO E PROPOSTAS DE TRABALHOS FUTUROS}
+\label{cap:conclusao}
+
+Neste trabalho, foi proposta uma nova função monitora, chamada de $\Lambda$, e comparou-se os resultados  obtidos com os resultados de outras funções monitoras encontradas na literatura. 
+
+Classificaram-se as funções monitoras de acordo com cada critério analisado. Com os resultados obtidos, pode-se verificar que cada função monitora possui suas qualidades e deficiências. A função $\Gamma$ mostrou-se eficiente por apresentar movimentos rápidos, com baixo custo computacional. No entanto, também apresentou a maior degeneração da malha, com os piores valores das métricas  {\it Circunradius-to-shortest Edge Radio} (CER) e {\it Shape Regularity Quality} (SRQ), a maior percentagem de triângulos com as métricas CER e SRQ consideradas ruins, também necessitando de mais vértices para correção da malha. A funçao $\Lambda$ foi a que apresentou valores razoáveis, em comparação com as demais, do maior valor e do valor médio do gradiente, denotados, respectivamente, $\gamma_{max}$ e $\gamma_{mean}$. Porém, como deficiência, a função $\Lambda$ demandou maior custo computacional para execução.
+
+Os experimentos com as funções $\Xi$ e $\Psi$ confirmaram que a principal qualidade dessas funções é a melhoria da qualidade da malha. Apresentaram os melhores resultados em relação às métricas CER e SRQ. Também apresentaram movimentos suaves, não ocorrendo grandes variações ao se utilizar diferentes parâmetros de adaptatividade, definido por $\beta$. Como deficiência, apresentaram baixos valores de $\gamma_{max}$ e $\gamma_{mean}$, ao se comparar com uma malha sem movimentar os vértices. Até a publicação deste trabalho, não foram encontrados outros trabalhos em que se utilizassem as funções de \citeonline[seção 3]{Taubin1995}, \citeonline[seção 2]{Taubin1995A} e \citeonline{Kobbelt1998} a fim de obter melhorias na aproximação da solução de equação diferencial parcial.
+
+A função $\Upsilon$ apresentou valores razoáveis de $\gamma_{max}$ e $\gamma_{mean}$, com custo computacional relativamente baixo. Entretanto, em vários experimentos utilizando essa função, as malhas apresentaram a maior quantidade de vértices em relação às demais. 
+
+Para o usuário que deseja movimento dos vértices da malha, com altos valores de $\gamma_{max}$ e $\gamma_{mean}$, sem necessidade de inclusão de vértices para melhoria da malha, a função $\Lambda$ pode ser a melhor alternativa. Ainda, para o usuário que deseja boa qualidade da malha nas métricas CER e SRQ, as funções $\Xi$  e $\Psi$ podem ser excelentes alternativas.
+
+Para o usuário que deseja custo computacional baixo e gradientes razoáveis na malha, a função $\Gamma$ é uma boa alternativa em relação às funções $\Lambda$ e $\Upsilon$, desde que não haja problemas na inclusão de vértices para melhoria na malha.
+
+A função $\Upsilon$ é interessante para usuários que desejam altos valores de $\gamma_{max}$, com taxa de crescimento do gradiente relativamente baixa, sem se importar com a inclusão de vértices para melhoria da qualidade da malha.
+
+É importante salientar que o movimento dos vértices não deve ser utilizado sem análise e planejamento. Em todos os experimentos, ocorreu que movimentar os vértices acarretou um custo computacional maior que realizar somente o refinamento da malha. É possível que o custo de movimentar os vértices possa ser reduzido aumentando-se a intensidade do movimento e, consequentemente, reduzindo o número de iterações das linhas \ref{laco_repita_inicio}-\ref{laco_repita_fim} do algoritmo (\ref{malha_movel}). Os testes com ``S/Mov.2'' resultam em malhas com a qualidade mínima estipulada pelo usuário. Isso significa que os testes com ``S/Mov.2'' resultam em malhas de qualidade. Em todos os testes realizados, ``S/Mov.2'' resultou em menor custo computacional.
+
+Como melhoria neste trabalho, seria importante realizar pesquisas sobre estimadores de erros {\it a posteriori}, equação do calor com termo fonte ou mesmo a aplicação em outra equação para análise e verificação da solução gerada. 
+
+Ainda, como proposta de trabalho futuro, seria a adaptação para discretizações de volumes finitos dos esquemas de movimentos de malhas de discretizações de elementos finitos baseados em \citeonline{Huang2011}. Ainda, os esquemas propostos por \citeonline{Springel2009} podem ser boas alternativas para a implementação de malhas móveis para se manter a qualidade da malha com baixo custo computacional na solução de equações diferenciais parciais.
+
+Com o intuito de se reduzir o tempo de processamento dos experimentos, bem como obter uma solução com melhor aproximação e em tempo hábil, também necessita-se paralelizar o método dos gradientes conjugados, método que mais demanda recursos de processamento.
+
+Com relação à malha, pode-se realizar experimentos com diferentes valores de fronteira e/ou com um domínio com geometria complexa. Também é possível obter melhorias nos resultados aumentando o parâmetro de adaptatividade $\beta$, ou mesmo, utilizando um $\beta$ local.

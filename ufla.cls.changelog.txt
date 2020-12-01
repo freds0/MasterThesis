@@ -1,0 +1,38 @@
+Change Log UFLA (antiga uflamon).
+- Alterado o nome da classe para UFLA apenas, já que não se trata mais apenas de uma classe para monografias.
+- Corrigida formatação da imagem da capa.
+- Corrigida formatação da folha de aprovação, incluindo espaçamentos e posicionamento dos membros da banca.
+- Corrigida formatação da lista de figuras.
+- Corrigida formatação da lista de tabelas.
+- Adicionado o comando \listofacronyms para criar lista de siglas.
+	Ex:
+		\listofacronyms{
+			\item[UFLA] Universidade Federal de Lavras
+			\item[UFMG] Universidade Federal de Minas Gerais
+		}
+- Corrigida a formatação do sumário.
+- Criados comandos para adicionar apendices no padrão da UFLA.
+	Ex:
+		\newpage
+		\apendices
+		\apendice{Primeiro Apendice}
+		\label{labeldasecao}
+		...
+		\apendice{Segundo apendice}
+		...
+- Criados comandos para adicionar anexos no padrão da UFLA.
+	Ex:
+		\newpage
+		\anexos
+		\anexo{Primeiro Apendice}
+		\label{labeldasecao}
+		...
+		\anexo{Segundo apendice}
+		...
+- Corrigida a formatação das legendas (captions) das figuras, tabelas e etc.
+- Sugere-se a utilização do pacote abntex2 para citações e referências nas normas da ABNT.
+	Exemplo de inserção da sessão de referências:
+		\bibliographystyle{abntex2-alf}
+		\bibliografia{refs}
+- Corrigida a formatação dos comandos \paragraph e \subparagraph. Alguns ajustes nos comandos \section, \subsection e \subsubsection.
+- Veja o exemplo que vem junto com a classe para mais informações de como utilizar.

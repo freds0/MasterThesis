@@ -1,0 +1,35 @@
+\section{INTRODUÇÃO}
+
+Técnicas de simulação computacional são utilizadas para descrever diversos fenômenos físicos que são modelados por equações diferenciais parcais (EDPs). Avanços nessas técnicas e o desenvolvimento de computadores de alto desempenho permitiram que fossem aplicadas em diferentes áreas, como o escoamento de fluidos, aerodinâmica, condução térmica, reações químicas, combustão e eletromagnetismo entre outros. Muitas vezes, a complexidade dos modelos que descrevem esses fenômenos torna impraticável o desenvolvimento de soluções analíticas. Desse modo, deve-se recorrer a simulações numéricas, que constituem ferramentas eficientes para solucionar esses problemas. No entanto, para simulação de problemas de grande dimensão, as técnicas numéricas utilizadas devem ser suficientemente eficientes de modo a possibilitarem resultados precisos em tempo viável.
+
+É comum o uso de métodos numéricos, como o método dos elementos finitos e o método dos volumes finitos, que realizam a decomposição do domínio em formas geométricas chamadas, respectivamente, elementos ou volumes de controle. Suas formas variam de tetraedros ou triângulos a quadriláteros, prismas, pirâmides ou hexaedros. Segundo \citeonline{Oliveira2013}:
+
+\begin{quotation} 
+A solução aproximada por meio de um método numérico é obtida para um número discreto de pontos, com um determinado erro, proveniente da aproximação e, se o método for convergente, conforme aumenta-se a quantidade de pontos, melhora-se a solução aproximada. A malha pode ser considerada o domínio discretizado geometricamente.
+\end{quotation}
+
+De acordo com \citeonline{Oliveira2013}, EDPs que modelam fenômenos físicos frequentemente possuem grandes variações na solução, ou ainda envolvem domínios de geometria complexa, ocasionando erros na solução. Uma estratégia utilizada para se diminuir esses erros é realizar o refinamento da malha. Entretanto, ainda segundo \citeonline{Oliveira2013}, ``ao se utilizar uma malha fina e uniforme ao longo de todo o domínio, tem-se também o aumento do custo computacional, como consequência do aumento do número de pontos.'' Uma forma de se contornar esse problema é posicionar mais pontos nas regiões de grande variação e menos pontos nas regiões de pequena variação, realizando o refinamento adaptativo, ocorrendo uma economia do custo computacional e uma melhoria da solução gerada. 
+
+Dentre os principais aspectos levados em consideração nas técnicas de geração de malhas, destacam-se o tempo de processamento para geração e a qualidade da malha gerada. O tempo de processamento depende da discretização do domínio e, consequentemente, da quantidade de pontos dessa discretização. Já a qualidade, leva em consideração a quantidade, a forma e a distribução dos elementos da malha. A qualidade da malha influencia diretamente nos resultados, tanto nos aspectos visuais quanto no erro da solução. Malhas triangulares tendem a melhor se adaptar ao domínio da solução. Devido a isso, diversas pesquisas de geração e refinamento de malhas vêm sendo realizadas ao longos dos anos. Algumas são brevemente analisadas nos capítulos seguintes deste trabalho.
+
+Também existem várias pesquisas relacionadas às técnicas de adaptatividade de malhas, e algumas delas são citadas neste trabalho, focadas na adaptatividade por refinamento e por movimento dos vértices. Nas técnicas de adaptatividade por refinamento, são inseridos novos pontos nas regiões de interesse. Nas técnicas de adaptatividade por movimento, chamadas de malhas móveis, mantém-se a quantidade original de pontos e realiza-se a realocação destes. Como a inclusão de pontos aumenta o custo computacional, neste trabalho há uma descrição das técnicas de adaptatividade de malhas com foco em malhas móveis.
+
+\subsection{Objetivos}
+
+A seguir serão apresentados o objetivo geral e os específicos deste trabalho.
+
+\subsubsection{Objetivo geral}
+
+Este trabalho tem o objetivo geral de aplicar um esquema que combine o refinamento de Delaunay e malhas móveis por volumes finitos na solução de equações diferenciais parciais de segunda ordem, como a equação de condução do calor.
+
+\subsubsection{Objetivos específicos}
+
+Os objetivos específicos principais são: revisar os conceitos de geração de malhas para resolução de EDPs utilizando o método dos volumes finitos; revisar técnicas de adaptatividade por inclusão de pontos e por malhas móveis; implementar um algoritmo híbrido de refinamento de Delaunay para a geração da malha inicial; gerar e implementar uma técnica de movimento de malhas que combine simplicidade, eficiência e velocidade; realizar experimentos computacionais para comparar os resultados com soluções encontradas na literatura.
+
+\subsection{Organização deste trabalho}
+
+Este trabalho está organizado em cinco capítulos. No capítulo (\ref{cap:referencial_teorico}), elucida-se o referencial teórico para desenvolvimento deste trabalho. Nesse capítulo, apresenta-se a triangulação de Delaunay e o seu dual, o diagrama de Voronoi; a discretização da equação do calor, utilizando-se o método dos volumes finitos com o diagrama de Voronoi; a construção do método dos gradientes conjugados, com pré-condicionamento e reordenação da matriz de coeficientes; e, por fim, aborda-se a suavização laplaciana e as principais características sobre malhas móveis.
+
+No capítulo (\ref{cap:desenvolvimento}), tem-se os detalhes da implementação deste trabalho. Descreve-se o procedimento de refinamento adaptativo e o procedimento que realiza o movimento dos vértices por meio de pseudocódigos. No capítulo (\ref{cap:resultados}), expõe-se os resultados dos experimentos realizados, conforme demonstrado no capítulo que o antecede. 
+
+Finalizando este trabalho, no capítulo (\ref{cap:conclusao}), apresenta-se a conclusão acerca dos resultados dos experimentos, bem como sugestões de trabalhos futuros.

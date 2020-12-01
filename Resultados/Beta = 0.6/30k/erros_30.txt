@@ -1,0 +1,88 @@
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -3.400716e-01 y: 2.995577e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -2.477078e-01 y: 2.633237e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -2.299193e-01 y: 2.828154e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -3.031797e-01 y: 2.716581e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -3.278895e-01 y: 4.625978e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -6.178562e-01 y: 4.029295e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -1.497621e-02 y: 3.436983e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -7.222275e-03 y: 3.436589e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -2.458947e-01 y: 2.988281e+01
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -7.202595e-03 y: 3.436603e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.960048e-01 y: 4.199370e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.143144e-01 y: 4.306012e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 3.378537e-01 y: 4.366818e+00
+ERROR - Mesh::insertVertice - don't find triangle containing vertex - x: -7.190495e-03 y: 3.436612e+01
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.500771e-01 y: 4.211543e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.521613e-01 y: 4.359752e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 2.955703e-01 y: 4.534072e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.570458e-01 y: 4.240648e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.664168e-01 y: 4.235217e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.151328e-01 y: 4.501070e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.233936e-01 y: 4.262765e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.462942e-01 y: 4.446240e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.878389e-01 y: 4.392047e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.540256e-01 y: 4.588264e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.415290e-01 y: 4.532812e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.632437e-01 y: 4.184846e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.980472e-01 y: 4.209212e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.736761e-01 y: 4.319962e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.064901e-01 y: 4.503771e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.878389e-01 y: 4.392047e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.783298e-01 y: 4.297294e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.736761e-01 y: 4.319962e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.878389e-01 y: 4.392047e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.878389e-01 y: 4.392047e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.788260e-01 y: 4.372838e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.531530e-01 y: 4.373298e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.223491e-01 y: 4.284532e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.696899e-01 y: 4.440375e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.412247e-01 y: 4.332940e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.660076e-01 y: 4.422240e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.440228e-01 y: 4.453514e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 2.316880e-01 y: 4.398403e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.699505e-01 y: 4.263251e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.400513e-01 y: 4.327681e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.136445e-01 y: 4.248583e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.797157e-01 y: 4.202239e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.518090e-01 y: 4.351259e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.641000e-01 y: 4.448066e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.226833e-01 y: 4.290621e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.064901e-01 y: 4.503771e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.102497e-01 y: 4.285618e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.366413e-01 y: 4.316567e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.309155e-01 y: 4.326257e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.412247e-01 y: 4.332940e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 4.821752e-01 y: 4.259601e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.749097e-01 y: 4.397709e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.710261e-01 y: 4.299965e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.477711e-01 y: 4.261218e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.614711e-01 y: 4.467150e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.412247e-01 y: 4.332940e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.412247e-01 y: 4.332940e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.878389e-01 y: 4.392047e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.853362e-01 y: 4.473561e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.645403e-01 y: 4.318537e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.710261e-01 y: 4.299965e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 3.898568e-01 y: 4.270121e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.917250e-01 y: 4.213406e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.645794e-01 y: 4.188636e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.962073e-01 y: 4.193140e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.136445e-01 y: 4.248583e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.262088e-01 y: 4.181452e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.102497e-01 y: 4.285618e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.052277e-01 y: 4.295178e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 8.033867e-01 y: 4.349921e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 9.064901e-01 y: 4.503771e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.500524e-01 y: 4.565801e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 3.760997e-01 y: 4.443968e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 5.772187e-01 y: 4.411957e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 7.078274e-01 y: 4.387834e+00
+ERROR - Mesh::insertVertice - Vertex already exists- x: 6.839610e-01 y: 4.339669e+00
+ERROR - Adjacency::addTriangle

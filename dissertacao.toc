@@ -1,0 +1,49 @@
+\select@language {portuges}
+\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{13}{section.1}
+\contentsline {subsection}{\numberline {1.1}Objetivos}{15}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Objetivo geral}{15}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Objetivos espec\IeC {\'\i }ficos}{15}{subsubsection.1.1.2}
+\contentsline {subsection}{\numberline {1.2}Organiza\IeC {\c c}\IeC {\~a}o deste trabalho}{16}{subsection.1.2}
+\contentsline {section}{\numberline {2}REFERENCIAL TE\IeC {\'O}RICO}{17}{section.2}
+\contentsline {subsection}{\numberline {2.1}A triangula\IeC {\c c}\IeC {\~a}o de Delaunay e o diagrama de Voronoi}{18}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Considera\IeC {\c c}\IeC {\~o}es iniciais}{18}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Manuten\IeC {\c c}\IeC {\~a}o da triangula\IeC {\c c}\IeC {\~a}o de Delaunay - Algoritmo de Lawson}{20}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Constru\IeC {\c c}\IeC {\~a}o da triangula\IeC {\c c}\IeC {\~a}o de Delaunay - Algoritmo de Green-Sibson}{21}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Refinamento de Delaunay}{22}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Resumo}{28}{subsubsection.2.1.5}
+\contentsline {subsection}{\numberline {2.2}Discretiza\IeC {\c c}\IeC {\~a}o da equa\IeC {\c c}\IeC {\~a}o do calor}{28}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Considera\IeC {\c c}\IeC {\~o}es iniciais}{28}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Equa\IeC {\c c}\IeC {\~a}o do calor}{29}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Discretiza\IeC {\c c}\IeC {\~a}o da equa\IeC {\c c}\IeC {\~a}o do calor com o diagrama de Voronoi}{30}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Resumo}{34}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}O m\IeC {\'e}todo dos gradientes conjugados}{34}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Considera\IeC {\c c}\IeC {\~o}es iniciais}{36}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Otimiza\IeC {\c c}\IeC {\~a}o para resolu\IeC {\c c}\IeC {\~a}o de sistemas lineares}{37}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Defini\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo}{37}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Pr\IeC {\'e}-condicionamento}{38}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Cuthill-McKee reverso}{41}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}Resumo}{45}{subsubsection.2.3.6}
+\contentsline {subsection}{\numberline {2.4}Suaviza\IeC {\c c}\IeC {\~a}o laplaciana}{45}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Malhas m\IeC {\'o}veis}{46}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Considera\IeC {\c c}\IeC {\~o}es iniciais}{47}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Adaptatividade}{48}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Princ\IeC {\'\i }pio da equidistribui\IeC {\c c}\IeC {\~a}o}{51}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Computa\IeC {\c c}\IeC {\~a}o em malhas m\IeC {\'o}veis}{53}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Uma revis\IeC {\~a}o de m\IeC {\'e}todos de malhas m\IeC {\'o}veis}{55}{subsubsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.6}Trabalhos que utilizam a suaviza\IeC {\c c}\IeC {\~a}o laplaciana}{63}{subsubsection.2.5.6}
+\contentsline {subsubsection}{\numberline {2.5.7}Trabalhos que realizam movimento de v\IeC {\'e}rtices baseado na formula\IeC {\c c}\IeC {\~a}o laplaciana}{66}{subsubsection.2.5.7}
+\contentsline {subsubsection}{\numberline {2.5.8}Resumo}{67}{subsubsection.2.5.8}
+\contentsline {subsection}{\numberline {2.6}M\IeC {\'e}trica geom\IeC {\'e}trica da qualidade da malha}{68}{subsection.2.6}
+\contentsline {section}{\numberline {3}DESCRI\IeC {\c C}\IeC {\~A}O DO PROJETO COMPUTACIONAL PARA A SOLU\IeC {\c C}\IeC {\~A}O DA EQUA\IeC {\c C}\IeC {\~A}O DE CONDU\IeC {\c C}\IeC {\~A}O DO CALOR}{70}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aritm\IeC {\'e}tica de precis\IeC {\~a}o arbitr\IeC {\'a}ria}{70}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Cria\IeC {\c c}\IeC {\~a}o da malha inicial}{71}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Refinamento de Delaunay}{72}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Resolu\IeC {\c c}\IeC {\~a}o da equa\IeC {\c c}\IeC {\~a}o de condu\IeC {\c c}\IeC {\~a}o do calor por discretiza\IeC {\c c}\IeC {\~o}es de volumes finitos na malha inicial}{74}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Movimento dos v\IeC {\'e}rtices}{75}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Resumo}{82}{subsection.3.6}
+\contentsline {section}{\numberline {4}TESTES EXPERIMENTAIS E DISCUSS\IeC {\~A}O DOS RESULTADOS}{83}{section.4}
+\contentsline {subsection}{\numberline {4.1}Comparativo fun\IeC {\c c}\IeC {\~o}es monitoras}{86}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Organiza\IeC {\c c}\IeC {\~a}o e discuss\IeC {\~a}o dos resultados}{102}{subsection.4.2}
+\contentsline {section}{\numberline {5}CONCLUS\IeC {\~A}O E PROPOSTAS DE TRABALHOS FUTUROS}{109}{section.5}
+\contentsline {section}{\hspace {1\contentsnumberwidth }REFER\^{E}NCIAS}{113}{section.5}
+\contentsfinish 

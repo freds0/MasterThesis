@@ -1,0 +1,147 @@
+\documentclass{ufla}
+\usepackage[portuges]{babel}
+\usepackage[allbordercolors={1 1 1}, bookmarks=true, bookmarksnumbered=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[cmex10]{amsmath}
+\usepackage{ae}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage[vlined,linesnumbered,titlenumbered,portuguese]{algorithm2e}
+\usepackage[alf,abnt-etal-cite=3,abnt-etal-list=0,abnt-etal-text=emph,bibjustif,abnt-repeated-title-omit=yes,abnt-show-options=warn]{abntex2cite}
+\usepackage{pslatex}
+
+% Configuracao do listings
+\lstset{ %
+language=C++,                % choose the language of the code
+basicstyle=\small\ttfamily,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\small,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=1ex,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,           % adds a frame around the code
+tabsize=2,          % sets default tabsize to 2 spaces
+captionpos=t,           % sets the caption-position to bottom
+breaklines=true,        % sets automatic line breaking
+breakatwhitespace=false,    % sets if automatic breaks should only happen at whitespace
+keywordstyle=\color[rgb]{0,0,1},
+commentstyle=\color[rgb]{0.133,0.545,0.133},
+stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
+
+\newcommand{\defs}[1]{\textsl{#1}}
+
+\author{Frederico Santos de Oliveira}
+\title{Uma avaliação de movimento de malhas baseado na formulação laplaciana na resolução da equação do calor por discretizações de volumes finitos com refinamento de Delaunay}
+%\folhaaprovacao{Img/folha-de-aprovacao.pdf}
+\date{2014}
+\tipo{Dissertação apresentada à Universidade Federal de Lavras, como parte das exigências do Programa de Pós-Graduação em Ciência da Computação, área de concentração em Inteligência Computacional e Processamento Gráfico, para a obtenção do título de Mestre.}
+\areaconcentracao{Inteligência Computacional e Processamento Gráfico}
+
+\orientador{Prof. D.Sc. Sanderson L. Gonzaga de Oliveira}
+% \coorientador{Dr. Raphael Winckler de Bettio}
+% \coorientadorbanca{Dr. Raphael W. de Bettio}
+% \coorientadorbancainst{UFLA}
+\bancaum{Dr. José da Silva}
+\bancauminst{UFLA}
+\bancadois{Dr. João da Silva}
+\bancadoisinst{UFLA}
+\defesa{31 de janeiro de 2014.}
+\palchaves{Geração de Malhas; Refinamento Adaptativo; Malhas Móveis}
+\keywords{Meshes Generation; Adaptive Refinement; Moving Meshes}
+
+\hyphenation{Ciência Computação Colegiado Curso Bacharel Universidade Federal Lavras Graduação Inteligência Computacional Processamento Gráfico}
+
+% Aumente este numero para aumentar o espacamento no sumário
+% entre os numeros das secoes e os titulos. Este é um fator
+% multiplicativo, 1.5 significa uma vez e meia o espaco padrao.
+\scalenumwidth{1}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{empty}
+\dedic{
+Dedico esta dissertação à ...
+}
+
+\thanks{
+Agradeço a...
+}
+
+\resumo{
+A programação de redes de sensores sem fio (RSSF) é uma tarefa complexa devido à programação em linguagens de baixo nível e à necessidade de uma aplicação distinta para cada sensor. Além disso, sensores sem fios possuem grandes limitações de hardware, como baixo poder de processamento, pouca memória e limitação energética.
+Portanto, a programação automática de RSSF é desejável, uma vez que pode-se contemplar essas dificuldades automaticamente, além de economizar em custos, pois elimina a necessidade de alocar um desenvolvedor para programar a RSSF.
+A geração automática de códigos-fonte para RSSF utilizando programação genética foi pouco estudada na literatura até o momento. A programação genética mostrou-se promissora na geração de código em diversas áreas de aplicação. Dessa forma o presente estudo propõe o desenvolvimento e a aplicação de algoritmos evolutivos para gerar e evoluir códigos-fonte que solucionem problemas de RSSF.
+Com isso é esperado que a programação genética obtenha resultados promissores na programação automática de RSSF. O objetivo é que os algoritmos evolutivos desenvolvidos sejam capazes de resolver problemas distintos de RSSF de forma correta (atendendo o objetivo geral do problema) e com uma eficiência satisfatória (principalmente no quesito energia gasta pelos nós sensores).
+O presente estudo abrirá novas linhas de pesquisa na área de RSSF, uma vez que a programação automática de RSSF elimina quase completamente a mão de obra humana na programação das mesmas, além de reduzir os custos para realizar essa tarefa.
+}
+
+\resumoingles{
+The wireless sensor networks (WSN) programming is a complex task due to the low-level programming languages and the need of a specific application for each sensor. Furthermore, wireless sensors have many hardware limitations such as low processing power, small memory and energetic limitations.
+Hence, the automatic programming of WSNs is desirable since it can automatically address these difficulties, besides saving costs by eliminating the need to allocate a developer to program the WSN.
+The automatic code generation for WSNs using genetic programming has been poorly studied in the literature so far. The genetic programming has proved to be promising in code generation for many application areas. This study proposes the development and application of evolutionary algorithms to generate source codes that solve WSNs problems.
+It is expected that the genetic programming achieve promising results in the automatic programming of WSNs. The developed evolutionary algorithms should be able to solve different problems of WSNs correctly (achieve the main goal of the problem) and with satisfatory efficiency (mainly on energy savings).
+This study will open new research lines in the area of WSNs since the automatic programming of WSNs almost completely eliminates the human programming effort, besides saving costs on executing this task.
+}
+
+\listoffigures
+\listoftables
+\listofacronyms{
+	\item[AG] Algoritmo Genético
+	\item[GRUBI] Grupo de Redes Ubíquas
+	\item[MV] Máquina Virtual
+	\item[MW] \emph{Middleware}
+	\item[PDE] Problema de Detecção de Eventos
+	\item[PG] Programação Genética
+	\item[RSSF] Redes de Sensores sem Fio
+	\item[UFLA] Universidade Federal de Lavras
+	\item[USP] Universidade de São Paulo
+}
+\tableofcontents
+
+\pagestyle{ufla}
+
+% As secoes podem estar separadas em arquivos .tex
+%\include{sections/introducao}
+%\include{sections/referencial}
+%\include{sections/metodologia}
+%\include{sections/resultados}
+%\include{sections/conclusao}
+\include{intro}
+
+\vfill\null\newpage
+\renewcommand{\baselinestretch}{1.0}
+\bibliographystyle{abntex2-alf}
+\bibliografia{refs}
+
+\renewcommand{\baselinestretch}{1.5}
+% Apendices e anexos
+\newpage
+\apendices
+%\input{sections/apend-middleware}
+\apendice{Primeiro Apêndice}
+Texto.
+
+\newpage
+\apendice{Segundo Apêndice}
+Texto.
+
+\newpage
+\anexos
+%\input{sections/apend-middleware}
+\anexo{Primeiro Anexo}
+Texto.
+
+\newpage
+\anexo{Segundo Anexo}
+Texto.
+
+\end{document}
