@@ -1,9 +1,9 @@
 # Master Thesis
 
-This repository contains all the latex files for my master's thesis at UFLA in Computing Science with computational intelligence research. 
+This repository contains all the latex files for my master's thesis at UFLA in Computing Science (Computational intelligence). 
 
-Master Thesis is available in portuguese at  https://github.com/freds0/MasterThesis/blob/main/dissertacao.pdf 
-Source code is available at https://github.com/freds0/HighPrecisionAdaptiveMesh
+- Master Thesis (in portuguese): https://github.com/freds0/MasterThesis/blob/main/dissertacao.pdf
+- Source code: https://github.com/freds0/HighPrecisionAdaptiveMesh
 
 ## Abstract
 Title: An Evaluation of Mesh Movement Based on Laplacian Formulation in the Resolution of the Heat Equation by Discretizations of Finite Volumes with Delaunay Refining
